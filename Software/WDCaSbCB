@@ -1,0 +1,35 @@
+Vol 1
+Story;Who;From;To;Mode;TimeDep;TimeArr;Aim;Comment
+1;Donald;home;street corner;walking;late evening;late evening;leisure;transport (seeds, gardening tools) with wheelbarrow
+1;Donald;street corner;home;walking;dawn;dawn;leisure;transport (gardening tools) with wheelbarrow
+1;Donald;home;street corner;walking;morning;morning;leisure;with hoe
+1;Donald;street corner;home;walking;late morning;late morning;leisure;accompagnied by 3 nephews
+1;3 nephews;home;seed shop;walking;afternoon;afternoon;shop;
+1;3 nephews;seed shop;home;walking;afternoon;afternoon;shop;with (invisible) seeds
+2;Donald and 3 nephews;outside of city;around city;walking;day;day;leisure;various destinations
+2;Donald and 3 nephews;zoo;zoo;row boat;day;day;leisure;
+2;Donald and 3 nephews;outside of city;home;walking;day;day;leisure;
+3;3 nephews;beach;shop;walking;day;day;shop;
+3;3 nephews;shop;beach;walking;day;day;leisure;
+4;Donald and 3 nephews;home;town;walking;morning;day;leisure;stroll to do good deeds
+4;Donald and 3 nephews;town;south;flying;day;day;unvoluntary;fell into plane
+4;Donald and 3 nephews;south;duckburgh;flying;day;day;home;
+5;Donald and 3 nephews;dude ranch;dude ranch;riding;day;evening;leisure;round trip via mesa
+
+Vol 2
+1;3 nephews;home;daisy's house;walk;day;day;leisure;
+1;3 nephews;daisy's house;woods;walk;day;day;leisure;
+1;Donald;home;woods;walk;day;day;leisure;
+1;Donald;home;woods;walk;morning;morning;leisure;
+1;Donald;woods;dog pound;walk;morning;morning;leisure;
+1;Donald;dog pound;woods;walk;morning;morning;leisure;
+1;Donald;woods;home;walk;morning;morning;leisure;
+1;Donald and 3 nephews;home;woods;walk;morning;morning;leisure;
+1;3 nephews;woods;home;walk;morning;morning;leisure;
+1;3 nephews;home;woods;walk;day;day;leisure;
+2;Donald and 3 nephews;home;town;car;day;day;;transport (all their belongings) to find new home
+3;Donald and 3 nephews;home;neighbour;walk;day;day;work;trying to sell egg beaters (transport)
+3;Donald and 3 nephews;neighbour;neighbour;walk;day;day;work;trying to sell egg beaters (transport) (multiple times, down a street)
+4;Donald and 3 nephews;ski shop;home;walk;day;day;
+4;Donald and 3 nephews;home;ski shop;walk;day;day;
+4;Donald and 3 nephews;ski slope;ski slope;ski;day;day;
