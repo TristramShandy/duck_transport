@@ -1,0 +1,439 @@
+---
+books:
+  -
+    name: Christmans Stories by Carl Barks
+    vol: 1
+    stories:
+      -
+        name: Donald Duck's Best Christmas
+        year: 1945
+      -
+        name: Santa's Stormy Visit
+        year: 1946
+      -
+        name: Three Good Little Ducks
+        year: 1947
+      -
+        name: Toyland
+        year: 1948
+      -
+        name: New Toys
+        year: 1949
+  -
+    name: WDC
+    vol: 18
+    stories:
+      -
+        name: A Financial Fable
+        year: 1951
+      -
+        name: April Foolers
+        year: 1951
+      -
+        name: Knightly Rivals
+        year: 1951
+      -
+        name: Pool Sharks
+        year: 1951
+      -
+        name: The Trouble With Dimes
+        year: 1951
+  -
+    name: WDC
+    vol: 16
+    stories:
+      -
+        name: Super Snooper
+        year: 1949
+      -
+        name: The Great Duckburg Frog Jumping Contest
+        year: 1949
+      -
+        name: Dowsing Duck
+        year: 1949
+      -
+        name: The Goldilocks Gambit
+        year: 1949
+      -
+        name: Donald's Love Letters
+        year: 1949
+  -
+    name: WDC
+    vol: 9
+    stories:
+      -
+        name: Playing Hookey
+        year: 1946
+      -
+        name: "The Gold-Finder"
+        year: 1946
+      -
+        name: Donald Duck and the Boys
+        year: 1946
+      -
+        name: Turkey Trouble
+        year: 1946
+      -
+        name: The Cantankerous Cat
+        year: 1947
+  -
+    name: WDC
+    vol: 20
+    stories:
+      -
+        name: The Big Bin on Kilmotor Hill
+        year: 1951
+      -
+        name: Gladstone's Usual Very Good Year
+        year: 1952
+      -
+        name: The Screaming Cowboy
+        year: 1952
+      -
+        name: Statuesque Spendrifts
+        year: 1952
+      -
+        name: Rocket Wing Saves the Day
+        year: 1952
+  -
+    name: WDC
+    vol: 26
+    stories:
+      -
+        name: The Price of Fame
+        year: 1954
+      -
+        name: Midgets Madness
+        year: 1954
+      -
+        name: Salmon Derby
+        year: 1954
+      -
+        name: Cheltenham's Choice
+        year: 1954
+      -
+        name: Travelling Truants
+        year: 1954
+  -
+    name: WDC
+    vol: 23
+    stories:
+      -
+        name:  My Lucky Valentine
+        year: 1953
+      -
+        name: The Easter Election
+        year: 1953
+      -
+        name: The Talking Dog
+        year: 1953
+      -
+        name: Worm Weary
+        year: 1953
+      -
+        name: Much Ado About Quackly Hall
+        year: 1953
+  -
+    name: WDC
+    vol: 13
+    stories:
+      -
+        name: Spoil the Rod
+        year: 1948
+      -
+        name: Rocket Race to The Moon
+        year: 1948
+      -
+        name: Donald of the Coast Patrol
+        year: 1948
+      -
+        name: Gladstone Returns
+        year: 1948
+      -
+        name: Links Hijinks
+        year: 1948
+  -
+    name: WDC
+    vol: 5
+    stories:
+      -
+        name: Thievery Afoot 
+        year: 1945
+      -
+        name: The Tramp Steamer
+        year: 1945
+      -
+        name: The Lon Race to Pumpkinburg
+        year: 1945
+      -
+        name: Donald Learns the Ropes
+        year: 1945
+      -
+        name: The Icebox Robber
+        year: 1945
+  -
+    name: WDC
+    vol: 4
+    stories:
+      -
+        name: Farragut the Falcon
+        year: 1944
+      -
+        name: The Purloined Putty
+        year: 1944
+      -
+        name: High Wire Daredevils
+        year: 1944
+      -
+        name: Ten Cents Worth of Trouble
+        year: 1944
+      -
+        name: Donald's Bay Lot
+        year: 1944
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+  -
+    name:
+    vol: 1
+    stories:
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951
+      -
+        name: 
+        year: 1951

@@ -1,0 +1,442 @@
+
+books:
+  -
+    name: Donald Duck Klassik Album
+    vol: 1
+    stories:
+      -
+        name: Noble Porpoises
+        name_de: Der große Fang
+        year: 1958
+      -
+        name: Donald's Pet Service
+        name_de: Ferienarbeit
+        year: 1957
+      -
+        name: Fearsome Flowers
+        name_de: Pflanzenfimmel
+        year: 1958
+      -
+        name: Roscoe the Robot
+        name_de: Roland der Roboter
+        year: 1957
+      -
+        name: Gyro's Imagination Invention
+        name_de: Der freie Lauf der Phantasie
+        year: 1957
+      -
+        name: The Old Castle's Secret
+        name_de: Das Gespenst von Duckenburgh
+        year: 1948
+      -
+        name: The Ice Taxis
+        name_de: Der Sofaexpreß
+        year: 1956
+      -
+        name: Inventor of Anything
+        name_de: Dem Ingeniör ist nichts zu schwör
+        year: 1956
+      -
+        name: The Golden Helmet
+        name_de: Der goldene Helm
+        year: 1952
+      -
+        name: "The Know-It-All Machine"
+        name_de: Der Roboter Rudi
+        year: 1958
+      -
+        name: Riding the Pony Express
+        name_de: Der Pony Express
+        year: 1960
+      -
+        name: Only a Poor Old Man
+        name_de: Der arme reiche Mann
+        year: 1952
+      -
+        name: The Inventor's Contest
+        name_de: Der Mäusefänger
+        year: 1959
+      -
+        name: Special Delivery
+        name_de: Kampf mit dem Löwen
+        year: 1957
+  -
+    name: Donald Duck Klassik Album
+    vol: 2
+    stories:
+      -
+        name: Luck of the North
+        name_de: Familie Duck auf Nordpolfahrt
+        year: 1949
+      -
+        name: Some Heir Over the Rainbow
+        name_de: Der richtige Erbe
+        year: 1952
+      -
+        name: Gyro Gearlose, Gyro's Helper
+        name_de: Kühnes Experiment
+        year: 1959
+      -
+        name: A Christmas For Shacktown
+        name_de: Weihnachten für Kummersdorf
+        year: 1952
+      -
+        name: Snow Duster
+        name_de: Eine fabelhafte Erfindung
+        year: 1963
+      -
+        name: The Money Stairs
+        name_de: Die Macht des Geldes
+        year: 1953
+      -
+        name: No Such Varmint
+        name_de: Der Schlangenbeschwörer
+        year: 1951
+      -
+        name: Searching for a Successor
+        name_de: Die Prüfung
+        year: 1956
+      -
+        name: The Stubborn Stork
+        name_de: Die störrische Störchin
+        year: 1959
+      -
+        name: "Big-Top Bedlam"
+        name_de: Die Jagd nach der Brosche
+        year: 1950
+      -
+        name: Heirloom
+        name_de: Die Erbuhr
+        year: 1955
+      -
+        name: Raffle Reversal
+        name_de: Glückspilz und Pechvogel
+        year: 1954
+  -
+    name: Donald Duck Klassik Album
+    vol: 3
+    stories:
+      -
+        name: The Mysterious Stone Ray
+        name_de: Die Kohldampfinsel
+        year: 1954
+      -
+        name: The Round Money Bin
+        name_de: Der neue Tresor
+        year: 1953
+      -
+        name: Tricky Experiment
+        name_de: Der Kugeltank
+        year: 1962
+      -
+        name: The Flying Dutchman
+        name_de: Der fliegende Holländer
+        year: 1959
+      -
+        name: The Magic Ink
+        name_de: Magische Mahntinte
+        year: 1958
+      -
+        name: The Big Bin on Killmotor Hill
+        name_de: Eingefrorenes Geld
+        year: 1951
+      -
+        name: Rocket Race to the Moon
+        name_de: Wettrennen zum Mond
+        year: 1948
+      -
+        name: The Horseradish Story
+        name_de: "13 Trillionen"
+        year: 1953
+      -
+        name: "Two-Way Luck"
+        name_de: Freitag der 13.
+        year: 1960
+      -
+        name: The Lemonade Fling
+        name_de: Die Prüfung
+        year: 1963
+      -
+        name: Movie Mad
+        name_de: Filmfreuden
+        year: 1962
+      -
+        name: Vacation Time
+        name_de: Familie Duck auf Ferienfahrt
+        year: 1950
+      -
+        name: Stranger than Fiction
+        name_de: Zukunftsmusik
+        year: 1961
+      -
+        name: The Firefly Tracker
+        name_de: Der Glühwürmchenfänger
+        year: 1959
+  -
+    name: Donald Duck Klassik Album
+    vol: 4
+    stories:
+      -
+        name: The Unorthodox Ox
+        name_de: Das Horoskop
+        year: 1955
+      -
+        name: Borderline Hero
+        name_de: Der Schmuggler
+        year: 1957
+      -
+        name: The Snow Chaser
+        name_de: Der Schneeverdampfer
+        year: 1960
+      -
+        name: Armored Rescue
+        name_de: 
+        year: 1952
+      -
+        name: The Madcap Mariner
+        name_de: Die Geheimwaffe
+        year: 1961
+      -
+        name: Statues of Limitations
+        name_de: "Der Schneemann-Preis"
+        year: 1957
+      -
+        name: Cheltenham's Choice
+        name_de: Eichendorfs Werke
+        year: 1954
+      -
+        name: The Price of Fame
+        name_de: Der Weg zum Ruhm
+        year: 1954
+      -
+        name: Touché Toupeé
+        name_de: Der Schreckenshut
+        year: 1960
+      -
+        name: Salmon Derby
+        name_de: Anglerfreuden
+        year: 1954
+      -
+        name: The Easter Election
+        name_de: Wahlkampf
+        year: 1953
+      -
+        name: "The Half-Baked Baker"
+        name_de: Kein Meister fällt vom Himmel
+        year: 1958
+      -
+        name: Knight in Shining Armor
+        name_de: Donald als Ritter
+        year: 1957
+      -
+        name: Dogcatcher Duck
+        name_de: Der Hundefänger
+        year: 1956
+      -
+        name: A Whale of a Story
+        name_de: Der Walfisch
+        year: 1956
+      -
+        name: Spring Fever
+        name_de: Der erste Frühling
+        year: 1959
+      -
+        name: "Fix-Up Mix-Up"
+        name_de: Selbst ist der Mann
+        year: 1954
+      -
+        name: A Financial Fable
+        name_de: Geld fällt vom Himmel
+        year: 1951
+      -
+        name: Return To Pizen Bluff
+        name_de: Eine windige Geschichte
+        year: 1959
+      -
+        name: Terror of the Beagle Boys
+        name_de: Der Selbstschuß
+        year: 1951
+      -
+        name: Good Canoes and Bad Canoes
+        name_de: Glück im Unglück
+        year: 1955
+  -
+    name: Donald Duck Klassik Album
+    vol: 5
+    stories:
+      -
+        name: Search for Cuspidoria
+        name_de: Weihnachtsüberraschungen
+        year: 1955
+      -
+        name: Mocking Bird Ridge
+        name_de: Das positive Echo
+        year: 1958
+      -
+        name: Pyramid Scheme
+        name_de: Schuster, bleib bei deinem Leisten
+        year: 1959
+      -
+        name: Knights of Flying Sleds
+        name_de: Düsenritter
+        year: 1960
+      -
+        name: Flip Decision
+        name_de: Wappen oder Zahl?
+        year: 1953
+      -
+        name: The Daffy Taffy Pull
+        name_de: "Das Bonbon-Maleur"
+        year: 1955
+      -
+        name: The Lost Peg Leg Mine
+        name_de: Der Witz der Wüstenratte
+        year: 1957
+      -
+        name: The Colossalest Surprise Quiz Show
+        name_de: Die Quizsendung
+        year: 1956
+      -
+        name: Outfoxed Fox
+        name_de: Onkel Dagobert geht zu weit
+        year: 1954
+      -
+        name: Monsterville
+        name_de: Die Monsterstadt
+        year: 1961
+      -
+        name: Turkey Trot at One Whistle
+        name_de: Der heldenmütige Stationsvorstand
+        year: 1954
+      -
+        name: Travelling Truants
+        name_de: Die Ausreißer
+        year: 1954
+      -
+        name: The Master Glasser
+        name_de: Glück und Glas
+        year: 1959
+      -
+        name: Bum Steer
+        name_de: 
+        year: 1953
+      -
+        name: The Chickadee Challenge
+        name_de: Die braven Brückenbauer
+        year: 1955
+      -
+        name: The Custard Gun
+        name_de: Das Senfgewehr
+        year: 1955
+      -
+        name: Statuesque Spendthrifts
+        name_de: Der reichste Mann der Welt
+        year: 1952
+      -
+        name: The Talking Dog
+        name_de: Die Quizsendung
+        year: 1953
+      -
+        name: Tree Trick
+        name_de: 
+        year: 1961
+      -
+        name: Forecasting Follies
+        name_de: Fragen an die Zukunft
+        year: 1956
+      -
+        name: Pound for Sound
+        name_de:
+        year: 1956
+      -
+        name: Midgets Madness
+        name_de: Der rasende Rennfahrer
+        year: 1954
+      -
+        name: The Black Forest Rescue
+        name_de: Das große Suchen
+        year: 1959
+  -
+    name: Ich Donald Duck
+    vol: 1
+    stories:
+      -
+        name: Lost in the Andes
+        name_de: Im Land der viereckigen Eier
+        year: 1949
+      -
+        name: Voodoo Hoodoo
+        name_de: Voodoo Hoodoo
+        year:  1949
+      -
+        name: Maharajah Donald
+        name_de: Maharadscha für einen Tag
+        year: 1947
+      -
+        name: Luck of the North
+        name_de: Familie Duck auf Nordpolfahrt
+        year: 1949
+      -
+        name: Trail of the Unicorn
+        name_de: Die Jagd auf das Einhorn
+        year: 1950
+      -
+        name: Land of the Totem Poles
+        name_de: Die Macht der Töne
+        year: 1950
+      -
+        name: A Christmas For Shacktown
+        name_de: Weihnachten für Kummersdorf
+        year: 1952
+  -
+    name: Ich Onkel Dagobert
+    vol: 1
+    stories:
+      -
+        name: Chritmas on Bear Mountain
+        name_de: Die Mutprobe
+        year: 1947
+      -
+        name: The Old Castle's Secret
+        name_de: Das Gespenst von Duckenburgh
+        year: 1948
+      -
+        name: "The Twenty-Four Carat Moon"
+        name_de: Verlorenes Mondgold
+        year: 1958
+      -
+        name: The Money Champ
+        name_de: Der reichste Mann der Welt
+        year: 1959
+      -
+        name: Pipeline to Danger
+        name_de: Das große Ölgeschäft
+        year: 1960
+      -
+        name: The Golden Nugget Boat
+        name_de: Das Goldschiff
+        year: 1961
+      -
+        name: The Midas Touch
+        name_de: "Der Midas-Effekt"
+        year: 1961
+      -
+        name: Cave of Ali Baba
+        name_de: Der Zauber des Orients
+        year: 1962
+      -
+        name: The Unsafe Safe
+        name_de: Glück und Glas
+        year: 1962
+      -
+        name: The Status Seeker
+        name_de: Die Spitzen der Gesellschaft
+        year: 1963
+      -
+        name: For Old Dime's Sake
+        name_de: Anschlag auf den Glückstaler
+        year: 1963
+      -
+        name: Crown of the Mayas
+        name_de: Die Krone der Mayas
+        year: 1963
