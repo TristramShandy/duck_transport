@@ -1,10 +1,14 @@
 
 require 'open-uri'
 require 'nokogiri'
+require 'yaml'
 
 UrlPrefix = "http://coa.inducks.org/"
 DDSH = "issue.php?c=de%2FTGDD++"
 ReFindBarks = /Writing:.*Carl Barks.*Art:.*Carl Barks/
+DDName = "Donald Duck Sonderheft"
+
+TargetIssues = "../Data/dds.txt"
 
 StoryData = Struct.new(:name, :year, :name_de, :inducks_id)
 
@@ -55,9 +59,16 @@ def get_ddsh(issue)
   result
 end
 
+def all_issues(filename)
+  issues = File.read(filename).split("\n").map {|str| str.to_i}.uniq
+  issues.map {|issue| {:name => DDName, :vol => issue, :stories => get_ddsh(issue).to_h}}
+end
+
 if $0 == __FILE__
   # puts get_ddsh(119).inspect
   puts get_ddsh("issue_test.html").inspect
+
+  # puts all_issues(TargetIssues).to_yaml
 end
 
 
