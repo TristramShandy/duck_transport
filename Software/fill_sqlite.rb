@@ -4,7 +4,7 @@ require 'set'
 require 'sqlite3'
 
 DataFile = "WDCaSbCB"
-DbFile = "duck_movement.db"
+DbFile = "../Data/duck_movement.db"
 
 UseDataLines = /^[0-9]/
 RecordSplit = ";"

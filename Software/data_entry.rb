@@ -1,7 +1,7 @@
 require 'Qt'
 require './movement'
 
-Filename = "duck_movement_test.db"
+Filename = "../Data/duck_movement_test.db"
 
 class DuckEntry < Qt::Widget
   slots :enter_movement

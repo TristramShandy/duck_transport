@@ -59,6 +59,6 @@ class DuckMovement
 end
 
 if $0 == __FILE__
-  dm = DuckMovement.new "duck_movement.db"
+  dm = DuckMovement.new "../Data/duck_movement.db"
   puts dm.inspect
 end
