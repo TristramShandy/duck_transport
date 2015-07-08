@@ -1,3 +1,4 @@
+# encoding: ISO-8859-1
 
 require 'open-uri'
 require 'nokogiri'
@@ -11,6 +12,8 @@ DDName = "Donald Duck Sonderheft"
 StoryData = Struct.new(:name, :year, :name_de, :inducks_id)
 
 TargetIssues = "../Data/dds.txt"
+
+ReCBLTitel = /CBL-Titel[^a-zA-Z]*([a-zA-Z"' ]*)/
 
 class DuckException < RuntimeError
 end
@@ -56,9 +59,17 @@ def get_story(url, name_de = nil)
 
   doc = Nokogiri::HTML(text)
   tag = get_id_tag(url)
+
   info = doc.xpath("//a[@name='#{tag}']/../..")
   raise DuckException.new("Bad info for url #{url}") if info.empty?
-  name = info.search("span")[0].content
+
+  name = nil
+  info[0].xpath("../div[@class='bbccomment']").each do |node|
+    if node.content =~ ReCBLTitel
+      name = $1
+    end
+  end
+  name = info.search("span")[0].content unless name
   inducks_id = url_to_inducks_id(info.xpath("a[@target='inducks']")[0]["href"])
 
   infoline = info.xpath("../div[@class='bbcinfo']")[0].content

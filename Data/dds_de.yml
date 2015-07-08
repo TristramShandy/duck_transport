@@ -73,7 +73,7 @@
     :year: 1948
     :name_de: Der Sheriff von Bullet Valley
     :inducks_id: W OS 199-02
-  - :name: Uncle Scrooge
+  - :name: Pyramid Scheme
     :year: 1958
     :name_de: Schuster, bleib bei deinem Leisten!
     :inducks_id: W US 25-05
@@ -106,7 +106,7 @@
 - :name: Donald Duck Sonderheft
   :vol: 70
   :stories:
-  - :name: Uncle Scrooge
+  - :name: Faulty Fortune
     :year: 1955
     :name_de: Das Kaffeeorakel
     :inducks_id: W US 14-05
@@ -136,7 +136,7 @@
     :year: 1965
     :name_de: Besuch vom Planeten Diana
     :inducks_id: W US 65-01
-  - :name: Donald Duck
+  - :name: Ten Cents Worth of Trouble
     :year: 1944
     :name_de: |-
       Donald, der Münzsammler/
@@ -160,7 +160,7 @@
     :year: 1966
     :name_de: Der Rinderkönig
     :inducks_id: W US 69-02
-  - :name: Donald Duck
+  - :name: High Wire Daredevils
     :year: 1944
     :name_de: Auf dem hohen Seil
     :inducks_id: W WDC 49-02
@@ -171,7 +171,7 @@
 - :name: Donald Duck Sonderheft
   :vol: 77
   :stories:
-  - :name: Uncle Scrooge
+  - :name: Tralla La
     :year: 1953
     :name_de: Der verhängnisvolle Kronenkork
     :inducks_id: W US 6-02
@@ -179,7 +179,7 @@
     :year: 1955
     :name_de: Das goldene Vlies
     :inducks_id: W US 12-02
-  - :name: Uncle Scrooge
+  - :name: Migrating Millions
     :year: 1956
     :name_de: Moderne Zeiten
     :inducks_id: W US 15-05
@@ -209,7 +209,7 @@
     :year: 1950
     :name_de: Die magische Sanduhr
     :inducks_id: W OS 291-02
-  - :name: Uncle Scrooge
+  - :name: The "Colossalest Surprise" Quiz Show
     :year: 1956
     :name_de: Die Quizsendung
     :inducks_id: W US 16-05
@@ -266,7 +266,7 @@
     :year: 1956
     :name_de: Picknick-Erfindungen
     :inducks_id: W PP 8-06
-  - :name: Donald Duck
+  - :name: Magical Misery
     :year: 1947
     :name_de: Zauberkunststücke
     :inducks_id: W WDC 82-02
@@ -292,7 +292,7 @@
     :year: 1959
     :name_de: Emilie
     :inducks_id: W OS 1010-02
-  - :name: Uncle Scrooge
+  - :name: A Campaign of Note
     :year: 1954
     :name_de: Wundersamer Wahlkampf
     :inducks_id: W US 8-03
@@ -308,7 +308,7 @@
     :year: 1963
     :name_de: Der geizige Verschwender
     :inducks_id: W US 47-01
-  - :name: Donald Duck
+  - :name: Donald's Bay Lot
     :year: 1944
     :name_de: Rache ist süß
     :inducks_id: W WDC 51-02
@@ -338,11 +338,11 @@
     :year: 1948
     :name_de: Segelregatta in die Südsee
     :inducks_id: W MOC 41-01
-  - :name: Uncle Scrooge
+  - :name: Smash Success
     :year: 1954
     :name_de: Onkel Dagobert [»Der Töpferladen«]
     :inducks_id: W US 10-04
-  - :name: Donald Duck
+  - :name: Foxy Relations
     :year: 1948
     :name_de: Die Fuchsjagd
     :inducks_id: W WDC 98-02
@@ -357,7 +357,7 @@
     :year: 1947
     :name_de: Australisches Abenteuer
     :inducks_id: W OS 159-02
-  - :name: Donald Duck
+  - :name: Sorry to Be Safe
     :year: 1948
     :name_de: Donald Duck [»Explosives Ballspiel«]
     :inducks_id: W OS 199-01
@@ -372,15 +372,15 @@
     :year: 1953
     :name_de: Der verlorene Zehner
     :inducks_id: W US 5-02
-  - :name: Donald Duck
+  - :name: The Truant Nephews
     :year: 1951
     :name_de: Die Schulschwänzer
     :inducks_id: W WDC 133-02
-  - :name: Donald Duck
+  - :name: Secret Resolutions
     :year: 1955
     :name_de: Gute Vorsätze
     :inducks_id: W WDC 185-02
-  - :name: Donald Duck
+  - :name: The Code of Duckburg
     :year: 1956
     :name_de: Baldur das Rentier
     :inducks_id: W WDC 208-01
@@ -391,15 +391,15 @@
     :year: 1952
     :name_de: Boshafte Kobolde
     :inducks_id: W DD 26-03
-  - :name: Uncle Scrooge
+  - :name: The Menehune Mystery
     :year: 1953
     :name_de: Unternehmen Inselfrieden
     :inducks_id: W US 4-02
-  - :name: Donald Duck
+  - :name: Thievery Afoot
     :year: 1944
     :name_de: Tauschhändel
     :inducks_id: W WDC 52-02
-  - :name: Donald Duck
+  - :name: Picnic Tricks
     :year: 1946
     :name_de: Unvergeßliches Picknick
     :inducks_id: W WDC 79-02
@@ -433,11 +433,11 @@
     :year: 1965
     :name_de: Heia Safari
     :inducks_id: W US 61-02
-  - :name: Donald Duck
+  - :name: The Cantankerous Cat
     :year: 1946
     :name_de: Falsch wie Gift
     :inducks_id: W WDC 76-02
-  - :name: Donald Duck
+  - :name: Donald Duck's Worst Nightmare
     :year: 1948
     :name_de: Traum und Wirklichkeit
     :inducks_id: W WDC 101-02
@@ -527,38 +527,38 @@
 - :name: Donald Duck Sonderheft
   :vol: 97
   :stories:
-  - :name: Uncle Scrooge
+  - :name: McDuck Takes a Dive
     :year: 1953
     :name_de: Onkel Dagobert [»Kreuzerfahrt in der Karibik«]
     :inducks_id: W US 5-03
-  - :name: Donald Duck
+  - :name: Going Buggy
     :year: 1946
     :name_de: Der Käferkiller
     :inducks_id: W WDC 77-02
-  - :name: Donald Duck
+  - :name: The Waltz King
     :year: 1947
     :name_de: Der Walzerkönig
     :inducks_id: W WDC 84-02
-  - :name: Donald Duck
+  - :name: Rip van Donald
     :year: 1949
     :name_de: Ein toller Schwindel
     :inducks_id: W WDC 112-02
-  - :name: Donald Duck
+  - :name: Mission to Codfish Cove
     :year: 1949
     :name_de: Die falsche Flasche
     :inducks_id: W WDC 114-02
-  - :name: Donald Duck
+  - :name: Pool Sharks
     :year: 1950
     :name_de: Gartenfreuden
     :inducks_id: W WDC 129-02
-  - :name: Donald Duck
+  - :name: Gladstone's Luck
     :year: 1951
     :name_de: Himmelhoch jauchzend, zu Tode betrübt
     :inducks_id: W WDC 131-02
 - :name: Donald Duck Sonderheft
   :vol: 100
   :stories:
-  - :name: Uncle Scrooge
+  - :name: Wrong Number
     :year: 1954
     :name_de: Onkel Dagobert [»Falsch verbunden«]
     :inducks_id: W US 7-04
@@ -570,7 +570,7 @@
     :year: 1963
     :name_de: Die Insel der goldenen Gänse
     :inducks_id: W US 45-01
-  - :name: Donald Duck
+  - :name: The Terrible Turkey
     :year: 1947
     :name_de: Jagdfieber
     :inducks_id: W WDC 87-02
@@ -599,7 +599,7 @@
     :year: 1960
     :name_de: Für die Tonne
     :inducks_id: W OS 1184-10
-  - :name: Uncle Scrooge
+  - :name: The Seven Cities of Cibola
     :year: 1954
     :name_de: Die Sieben Städte von Cibola
     :inducks_id: W US 7-02
@@ -607,14 +607,14 @@
     :year: 1959
     :name_de: Der Hund der Whiskervilles
     :inducks_id: W US 29-04
-  - :name: Donald Duck
+  - :name: The Trouble with Dimes
     :year: 1950
     :name_de: Seltene Münzen
     :inducks_id: W WDC 130-02
 - :name: Donald Duck Sonderheft
   :vol: 109
   :stories:
-  - :name: Donald Duck
+  - :name: The Limber W Guest Ranch
     :year: 1943
     :name_de: Der sechste Sinn
     :inducks_id: W WDC 35-01
@@ -629,7 +629,7 @@
 - :name: Donald Duck Sonderheft
   :vol: 112
   :stories:
-  - :name: Gyro Gearloose
+  - :name: Roscoe the Robot
     :year: 1957
     :name_de: Roland, der Roboter
     :inducks_id: W US 20-03
@@ -637,7 +637,7 @@
     :year: 1957
     :name_de: Die Geldquelle
     :inducks_id: W US 21-02
-  - :name: Donald Duck
+  - :name: Donald Duck and the Boys
     :year: 1946
     :name_de: Gnadenlos
     :inducks_id: W WDC 74-01
@@ -656,7 +656,7 @@
     :year: 1959
     :name_de: Die störrische Störchin
     :inducks_id: W OS 1047-03
-  - :name: Donald Duck
+  - :name: The Great Ski Race
     :year: 1945
     :name_de: Ein schmähliches Ende
     :inducks_id: W WDC 62-02
@@ -667,49 +667,49 @@
     :year: 1956
     :name_de: Fragwürdiger Einkauf
     :inducks_id: W US 17-02
-  - :name: Donald Duck
+  - :name: Vacation Time
     :year: 1947
     :name_de: Friedliche Ferien
     :inducks_id: W WDC 83-02
-  - :name: Donald Duck
+  - :name: Spoil the Rod
     :year: 1947
     :name_de: Moderne Erziehungsmethoden
     :inducks_id: W WDC 92-02
 - :name: Donald Duck Sonderheft
   :vol: 117
   :stories:
-  - :name: Uncle Scrooge
+  - :name: Ballet Evasions
     :year: 1953
     :name_de: Onkel Dagobert [»Dagobert, der Ballettmeister«]
     :inducks_id: W US 4-01
-  - :name: Donald Duck
+  - :name: Donald of the Coast Patrol
     :year: 1948
     :name_de: Kommt zur Küstenwache!
     :inducks_id: W WDC 94-02
-  - :name: Donald Duck
+  - :name: Pearls of Wisdom
     :year: 1948
     :name_de: Das Perlenwunder
     :inducks_id: W WDC 97-02
-  - :name: Donald Duck
+  - :name: Pizen Spring Dude Ranch
     :year: 1948
     :name_de: Seltsames Ferienerlebnis
     :inducks_id: W WDC 102-02
-  - :name: Donald Duck
+  - :name: Rival Beachcombers
     :year: 1948
     :name_de: Wer sucht, der findet
     :inducks_id: W WDC 103-02
 - :name: Donald Duck Sonderheft
   :vol: 118
   :stories:
-  - :name: Donald Duck
+  - :name: April Foolers
     :year: 1950
     :name_de: April! April!
     :inducks_id: W WDC 127-02
-  - :name: Donald Duck
+  - :name: Gladstone's Terrible Secret
     :year: 1951
     :name_de: Eine peinliche Enthüllung
     :inducks_id: W WDC 140-02
-  - :name: Donald Duck
+  - :name: Gemstone Hunters
     :year: 1952
     :name_de: Angeber oder Glückspilz?
     :inducks_id: W WDC 143-01
@@ -724,14 +724,14 @@
     :year: 1961
     :name_de: Tag der Gefahr
     :inducks_id: W US 36-02
-  - :name: Donald Duck
+  - :name: A Charitable Chore
     :year: 1952
     :name_de: Gute Nachbarschaftshilfe
     :inducks_id: W WDC 147-01
 - :name: Donald Duck Sonderheft
   :vol: 120
   :stories:
-  - :name: Uncle Scrooge and Gyro
+  - :name: The Forbidium Money Bin
     :year: 1958
     :name_de: Der Fortismiumbehälter
     :inducks_id: W DISBP 1-03
@@ -746,56 +746,56 @@
 - :name: Donald Duck Sonderheft
   :vol: 121
   :stories:
-  - :name: Donald Duck
+  - :name: Jam Robbers
     :year: 1946
     :name_de: Die Erdölaktie
     :inducks_id: W WDC 78-02
-  - :name: Donald Duck
+  - :name: Donald Mines His Own Business
     :year: 1947
     :name_de: Die Goldgrube
     :inducks_id: W WDC 81-02
-  - :name: Donald Duck
+  - :name: Plenty of Pets
     :year: 1949
     :name_de: Hilfreiche Tiere
     :inducks_id: W WDC 106-02
 - :name: Donald Duck Sonderheft
   :vol: 122
   :stories:
-  - :name: Donald Duck
+  - :name: Dowsing Ducks
     :year: 1949
     :name_de: Die Wünschelrute
     :inducks_id: W WDC 109-02
-  - :name: Donald Duck
+  - :name: The Screaming Cowboy
     :year: 1951
     :name_de: Der Schnee-Einsiedel
     :inducks_id: W WDC 137-02
-  - :name: Donald Duck
+  - :name: Rocket Wing Saves the Day
     :year: 1951
     :name_de: Die Reisetaube
     :inducks_id: W WDC 139-02
 - :name: Donald Duck Sonderheft
   :vol: 123
   :stories:
-  - :name: Donald Duck
+  - :name: Worm Weary
     :year: 1952
     :name_de: Die Wunder-Würmer
     :inducks_id: W WDC 153-01
-  - :name: Donald Duck
+  - :name: A Descent Interval
     :year: 1954
     :name_de: Der tollkühne Taucher
     :inducks_id: W WDC 177-01
-  - :name: Donald Duck
+  - :name: Losing Face
     :year: 1956
     :name_de: Ein kleines Mißgeschick
     :inducks_id: W WDC 204-01
 - :name: Donald Duck Sonderheft
   :vol: 124
   :stories:
-  - :name: Donald Duck
+  - :name: Sagmore Springs Hotel
     :year: 1957
     :name_de: Die Bewährung
     :inducks_id: W WDC 206-02
-  - :name: Donald Duck
+  - :name: Wishing Stone Island
     :year: 1957
     :name_de: Der Aprilscherz
     :inducks_id: W WDC 211-01
@@ -806,11 +806,11 @@
 - :name: Donald Duck Sonderheft
   :vol: 127
   :stories:
-  - :name: Donald Duck
+  - :name: Kakimaw Country
     :year: 1956
     :name_de: Der große Regen
     :inducks_id: W WDC 202-01
-  - :name: Donald Duck
+  - :name: Red Apple Sap
     :year: 1956
     :name_de: Erntesegen
     :inducks_id: W WDC 205-01
@@ -821,30 +821,30 @@
 - :name: Donald Duck Sonderheft
   :vol: 129
   :stories:
-  - :name: Donald Duck
+  - :name: Managing the Echo System
     :year: 1949
     :name_de: Kampf der Echos
     :inducks_id: W WDC 105-02
-  - :name: Donald Duck
+  - :name: The Great Duckburg Frog Jumping Contest
     :year: 1949
     :name_de: Vorsicht, Turnierfrosch!
     :inducks_id: W WDC 108-02
-  - :name: Donald Duck
+  - :name: The Goldilocks Gambit
     :year: 1949
     :name_de: Ein Bärenspaß
     :inducks_id: W WDC 110-02
 - :name: Donald Duck Sonderheft
   :vol: 130
   :stories:
-  - :name: Donald Duck
+  - :name: Donald's Love Letters
     :year: 1949
     :name_de: Die vertauschten Briefe
     :inducks_id: W WDC 111-02
-  - :name: Donald Duck
+  - :name: Knightly Rivals
     :year: 1950
     :name_de: Ritter Eisenbeiß
     :inducks_id: W WDC 128-02
-  - :name: Donald Duck
+  - :name: Bee Bumbles
     :year: 1953
     :name_de: Der Bienenkrieg
     :inducks_id: W WDC 158-01
@@ -870,7 +870,7 @@
 - :name: Donald Duck Sonderheft
   :vol: 133
   :stories:
-  - :name: Donald Duck
+  - :name: Links Hijinks
     :year: 1948
     :name_de: Das große Golfmogeln
     :inducks_id: W WDC 96-02
@@ -900,15 +900,15 @@
 - :name: Donald Duck Sonderheft
   :vol: 137
   :stories:
-  - :name: Donald Duck
+  - :name: Bean Taken
     :year: 1948
     :name_de: Donald Duck [»Das Bohnenzählen«]
     :inducks_id: W OS 189-04
-  - :name: Donald Duck
+  - :name: Tunnel Vision
     :year: 1948
     :name_de: Donald Duck [»Wir schalten um«]
     :inducks_id: W OS 223-03
-  - :name: Donald Duck
+  - :name: Toasty Toys
     :year: 1949
     :name_de: Donald Duck [»Wärmende Spielsachen«]
     :inducks_id: W OS 256-01
@@ -924,7 +924,7 @@
     :year: 1950
     :name_de: Ein Unglückstag
     :inducks_id: W VP 1-08
-  - :name: Donald Duck
+  - :name: Donald's Posy Patch
     :year: 1947
     :name_de: Blaue Blütenpracht
     :inducks_id: W WDC 80-02
@@ -932,7 +932,7 @@
     :year: 1962
     :name_de: Die Eignungsprüfung
     :inducks_id: W WDC 266-02
-  - :name: Donald Duck
+  - :name: The Milkman
     :year: 1957
     :name_de: Der Milchmann
     :inducks_id: CS WDC '57
@@ -971,11 +971,11 @@
 - :name: Donald Duck Sonderheft
   :vol: 219
   :stories:
-  - :name: Uncle Scrooge
+  - :name: Soupline Eight
     :year: 1951
     :name_de: Bison 8-Zylinder
     :inducks_id: W OS 386-04
-  - :name: Donald Duck
+  - :name: Atonal Terror
     :year: 1947
     :name_de: Musikalischer Unfug
     :inducks_id: W WDC 85-02
