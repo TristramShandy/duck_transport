@@ -1,0 +1,401 @@
+---
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 1
+  :stories:
+  - :name: Roscoe the Robot
+    :year: 1957
+    :name_de: Roland, der Roboter
+    :inducks_id: W US 20-03
+  - :name: Donald's Big Imagination
+    :year: 1956
+    :name_de: Der freie Lauf der Phantasie
+    :inducks_id: W WDC 199-01
+  - :name: Donald's Pet Service
+    :year: 1956
+    :name_de: Ferienarbeit
+    :inducks_id: W WDC 200-01
+  - :name: Fearsome Flowers
+    :year: 1956
+    :name_de: Pflanzenfimmel
+    :inducks_id: W WDC 214-01
+  - :name: Noble Porpoises
+    :year: 1958
+    :name_de: Der große Fang
+    :inducks_id: W WDC 218-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 2
+  :stories:
+  - :name: The Old Castle's Secret
+    :year: 1947
+    :name_de: Das Gespenst von Duckenburgh
+    :inducks_id: W OS 189-02
+  - :name: Inventor of Anything
+    :year: 1955
+    :name_de: Dem Ingeniör ist nichts zu schwör!
+    :inducks_id: W US 14-03
+  - :name: Donald Duck
+    :year: 1955
+    :name_de: Der Sofaexpreß
+    :inducks_id: W WDC 186-02
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 3
+  :stories:
+  - :name: The Golden Helmet
+    :year: 1951
+    :name_de: Donald Duck und der Goldene Helm
+    :inducks_id: W OS 408-02
+  - :name: The Know
+    :year: 1957
+    :name_de: Der Roboter Rudi
+    :inducks_id: W US 22-04
+  - :name: Riding the Pony Express
+    :year: 1959
+    :name_de: Der Pony-Expreß
+    :inducks_id: W WDC 234-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 4
+  :stories:
+  - :name: Only a Poor Old Man
+    :year: 1951
+    :name_de: |-
+      Der »arme alte Mann«/
+      Der arme reiche Mann
+    :inducks_id: W OS 386-02
+  - :name: The Inventors' Contest
+    :year: 1959
+    :name_de: Der Mäusefänger
+    :inducks_id: W US 28-02
+  - :name: Special Delivery
+    :year: 1956
+    :name_de: Kampf mit dem Löwen
+    :inducks_id: W WDC 203-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 5
+  :stories:
+  - :name: Luck of the North
+    :year: 1949
+    :name_de: Donald Duck auf Nordpolfahrt
+    :inducks_id: W OS 256-02
+  - :name: Krankenstein Gyro
+    :year: 1958
+    :name_de: Kühnes Experiment
+    :inducks_id: W US 26-02
+  - :name: Some Heir over the Rainbow
+    :year: 1952
+    :name_de: Der richtige Erbe
+    :inducks_id: W WDC 155-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 6
+  :stories:
+  - :name: A Christmas for Shacktown
+    :year: 1951
+    :name_de: Weihnachten für Kummersdorf
+    :inducks_id: W OS 367-02
+  - :name: Snow Duster
+    :year: 1962
+    :name_de: Eine fabelhafte Erfindung
+    :inducks_id: W US 41-04
+  - :name: Donald Duck
+    :year: 1953
+    :name_de: Die Macht des Geldes
+    :inducks_id: W WDC 157-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 7
+  :stories:
+  - :name: No Such Varmint
+    :year: 1950
+    :name_de: Der Schlangenbeschwörer
+    :inducks_id: W OS 318-02
+  - :name: The Stubborn Stork
+    :year: 1959
+    :name_de: Die störrische Störchin
+    :inducks_id: W OS 1047-03
+  - :name: Searching for a Successor
+    :year: 1955
+    :name_de: Die Prüfung
+    :inducks_id: W WDC 187-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 8
+  :stories:
+  - :name: Big-Top Bedlam
+    :year: 1950
+    :name_de: Die Jagd nach der Brosche
+    :inducks_id: W OS 300-02
+  - :name: Heirloom Watch
+    :year: 1954
+    :name_de: Die Erbuhr
+    :inducks_id: W US 10-03
+  - :name: Raffle Reversal
+    :year: 1953
+    :name_de: Glückspilz und Pechvogel
+    :inducks_id: W WDC 163-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 9
+  :stories:
+  - :name: The Round Money Bin
+    :year: 1953
+    :name_de: Der neue Tresor
+    :inducks_id: W OS 495-03
+  - :name: Uncle Scrooge
+    :year: 1954
+    :name_de: Die Kohldampf-Insel
+    :inducks_id: W US 8-02
+  - :name: Tricky Experiment
+    :year: 1962
+    :name_de: Der Kugeltank
+    :inducks_id: W US 39-05
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 10
+  :stories:
+  - :name: The Magic Ink
+    :year: 1958
+    :name_de: Magische Mahntinte
+    :inducks_id: W US 24-04
+  - :name: The Flying Dutchman
+    :year: 1958
+    :name_de: Der Fliegende Holländer
+    :inducks_id: W US 25-02
+  - :name: Rocket Race to the Moon
+    :year: 1948
+    :name_de: Wettrennen zum Mond
+    :inducks_id: W WDC 93-02
+  - :name: The Big Bin on Killmotor Hill
+    :year: 1951
+    :name_de: Eingefrorenes Geld
+    :inducks_id: W WDC 135-02
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 11
+  :stories:
+  - :name: The Horse
+    :year: 1953
+    :name_de: Dagobert Ducks 13 Trillionen
+    :inducks_id: W OS 495-02
+  - :name: Two-Way Luck
+    :year: 1960
+    :name_de: Freitag, der 13.
+    :inducks_id: W US 31-04
+  - :name: The Lemonade Fling
+    :year: 1963
+    :name_de: Die Prüfung
+    :inducks_id: W US 46-04
+  - :name: Movie Mad
+    :year: 1961
+    :name_de: Filmfreuden
+    :inducks_id: W WDC 257-02
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 12
+  :stories:
+  - :name: The Firefly Tracker
+    :year: 1958
+    :name_de: Der Glühwürmchenfänger
+    :inducks_id: W US 27-02
+  - :name: Vacation Time
+    :year: 1950
+    :name_de: Familie Duck auf Ferienfahrt
+    :inducks_id: W VP 1-01
+  - :name: Stranger than Fiction
+    :year: 1960
+    :name_de: Zukunftsmusik
+    :inducks_id: W WDC 249-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 13
+  :stories:
+  - :name: Armored Rescue
+    :year: 1952
+    :name_de: Gerüstet
+    :inducks_id: W OS 422-03
+  - :name: The Snow Chaser
+    :year: 1959
+    :name_de: Der Schneeverdampfer
+    :inducks_id: W OS 1073-04
+  - :name: The Unorthodox Ox
+    :year: 1955
+    :name_de: Das Horoskop
+    :inducks_id: W WDC 182-01
+  - :name: Statues of Limitations
+    :year: 1955
+    :name_de: Der Schneemann-Preis
+    :inducks_id: W WDC 196-02
+  - :name: Borderline Hero
+    :year: 1956
+    :name_de: Der Schmuggler
+    :inducks_id: W WDC 197-02
+  - :name: The Madcap Mariner
+    :year: 1960
+    :name_de: Die Geheimwaffe
+    :inducks_id: W WDC 247-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 14
+  :stories:
+  - :name: Touché Toupee
+    :year: 1959
+    :name_de: Der Schreckenshut
+    :inducks_id: W OS 1073-03
+  - :name: The Easter Election
+    :year: 1952
+    :name_de: Wahlkampf
+    :inducks_id: W WDC 151-01
+  - :name: The Price of Fame
+    :year: 1953
+    :name_de: Der Weg zum Ruhm
+    :inducks_id: W WDC 165-01
+  - :name: Salmon Derby
+    :year: 1953
+    :name_de: Anglerfreuden
+    :inducks_id: W WDC 167-01
+  - :name: Cheltenham's Choice
+    :year: 1953
+    :name_de: Eichendorfs Werke
+    :inducks_id: W WDC 168-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 15
+  :stories:
+  - :name: Dogcatcher Duck
+    :year: 1954
+    :name_de: Der Hundefänger
+    :inducks_id: W DD 45-06
+  - :name: A Whale of a Story
+    :year: 1955
+    :name_de: Der Walfisch
+    :inducks_id: W WDC 193-01
+  - :name: Knight in Shining Armor
+    :year: 1956
+    :name_de: Donald als Ritter
+    :inducks_id: W WDC 198-02
+  - :name: The Half
+    :year: 1957
+    :name_de: Kein Meister fällt vom Himmel
+    :inducks_id: W WDC 210-02
+  - :name: First Day of Spring
+    :year: 1958
+    :name_de: Der erste Frühlingstag
+    :inducks_id: W WDC 223-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 16
+  :stories:
+  - :name: Pizen Bluff
+    :year: 1958
+    :name_de: Eine windige Geschichte
+    :inducks_id: W US 26-04
+  - :name: A Financial Fable
+    :year: 1950
+    :name_de: Geld fällt vom Himmel
+    :inducks_id: W WDC 126-02
+  - :name: Terror of the Beagle Boys
+    :year: 1951
+    :name_de: |-
+      Donald Duck und sein reicher Onkel in Amerika/
+      Der Selbstschuß
+    :inducks_id: W WDC 134-02
+  - :name: Donald Duck
+    :year: 1953
+    :name_de: Selbst ist der Mann
+    :inducks_id: W WDC 161-01
+  - :name: Good Canoes and Bad Canoes
+    :year: 1954
+    :name_de: Glück im Unglück
+    :inducks_id: W WDC 179-02
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 17
+  :stories:
+  - :name: Pyramid Scheme
+    :year: 1958
+    :name_de: Schuster, bleib bei deinem Leisten!
+    :inducks_id: W US 25-05
+  - :name: Flip Decision
+    :year: 1952
+    :name_de: Wappen oder Zahl?
+    :inducks_id: W WDC 149-01
+  - :name: Search for the Cuspidoria
+    :year: 1954
+    :name_de: Weihnachtsüberraschungen
+    :inducks_id: W WDC 172-01
+  - :name: Mocking Bird Ridge
+    :year: 1957
+    :name_de: Das positive Echo
+    :inducks_id: W WDC 215-01
+  - :name: Knights of the Flying Sleds
+    :year: 1959
+    :name_de: Düsenritter
+    :inducks_id: W WDC 233-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 18
+  :stories:
+  - :name: The Lost Peg Leg Mine
+    :year: 1956
+    :name_de: Der Witz mit den Wüstenratten
+    :inducks_id: W DD 52-02
+  - :name: Monsterville
+    :year: 1960
+    :name_de: Die Monsterstadt
+    :inducks_id: W OS 1184-02
+  - :name: Uncle Scrooge
+    :year: 1953
+    :name_de: Onkel Dagobert geht zu weit
+    :inducks_id: W US 6-03
+  - :name: The "Colossalest Surprise" Quiz Show
+    :year: 1956
+    :name_de: Die Quizsendung
+    :inducks_id: W US 16-05
+  - :name: The Daffy Taffy Pull
+    :year: 1954
+    :name_de: Das große Bonbon-Malheur
+    :inducks_id: W WDC 175-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 19
+  :stories:
+  - :name: The Master Glasser
+    :year: 1959
+    :name_de: Glück und Glas
+    :inducks_id: W DD 68-04
+  - :name: Bum Steer
+    :year: 1953
+    :name_de: Onkel Dagobert [»Alles Geld dem Volke«]
+    :inducks_id: W US 4-04
+  - :name: Turkey Trot at One Whistle
+    :year: 1953
+    :name_de: Der heldenmütige Stationsvorstand
+    :inducks_id: W WDC 162-01
+  - :name: Travelling Truants
+    :year: 1954
+    :name_de: Die Ausreißer
+    :inducks_id: W WDC 169-03
+  - :name: Donald Duck
+    :year: 1955
+    :name_de: Die braven Brückenbauer
+    :inducks_id: W WDC 181-01
+  - :name: The Custard Gun
+    :year: 1955
+    :name_de: Das Senfgewehr
+    :inducks_id: W WDC 183-01
+- :name: Die besten Geschichten mit Donald Duck - Klassik Album
+  :vol: 20
+  :stories:
+  - :name: Pound for Sound
+    :year: 1956
+    :name_de: Onkel Dagobert [»Das Gratiskonzert«]
+    :inducks_id: W US 15-06
+  - :name: Forecasting Follies
+    :year: 1956
+    :name_de: Fragen an die Zukunft
+    :inducks_id: W US 16-03
+  - :name: Tree Trick
+    :year: 1956
+    :name_de: Onkel Dagobert [»Der Gärtnertrick«]
+    :inducks_id: W US 33-01
+  - :name: Statuesque Spendthrifts
+    :year: 1951
+    :name_de: Der reichste Mann der Welt
+    :inducks_id: W WDC 138-02
+  - :name: The Talking Dog
+    :year: 1952
+    :name_de: Die Quiz-Sendung
+    :inducks_id: W WDC 152-01
+  - :name: Donald Duck
+    :year: 1953
+    :name_de: Der rasende Rennfahrer
+    :inducks_id: W WDC 166-01
+  - :name: Donald Duck
+    :year: 1958
+    :name_de: Das große Suchen
+    :inducks_id: W WDC 227-01

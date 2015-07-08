@@ -4,10 +4,27 @@ require 'open-uri'
 require 'nokogiri'
 require 'yaml'
 
+TargetSymbols = [:klassik]
+TitleInfo = Struct.new(:symbol, :name, :bookname, :issues)
+
+DdsTitles = [
+50, 51, 57, 58, 64, 66, 66, 67, 68, 70, 71, 74, 75, 76, 77, 78, 79, 80, 81, 82,
+83, 85, 86, 87, 89, 90, 90, 91, 92, 92, 93, 94, 95, 95, 96, 97, 100, 103, 106,
+106, 107, 107, 109, 112, 113, 116, 116, 117, 117, 118, 118, 119, 119, 120, 120,
+121, 121, 122, 122, 123, 124, 124, 127, 129, 130, 130, 132, 132, 133, 134, 137,
+142, 144, 160, 169, 219, 234, ]
+
+DdsName = "Donald Duck Sonderheft"
+DdsBookname = "Die tollsten Geschichten von Donald Duck"
+KlassikName = "Die besten Geschichten mit Donald Duck - Klassik Album"
+
+Titles = [
+  TitleInfo.new(:dds, DdsName, DdsBookname, DdsTitles),
+  TitleInfo.new(:klassik, KlassikName, KlassikName, (1..20).to_a)
+]
+
 UrlPrefix = "http://www.barksbase.de/deutsch/"
 DataDirectory = "../Data"
-Bookname = "Die tollsten Geschichten von Donald Duck"
-DDName = "Donald Duck Sonderheft"
 
 StoryData = Struct.new(:name, :year, :name_de, :inducks_id)
 
@@ -18,17 +35,24 @@ ReCBLTitel = /CBL-Titel[^a-zA-Z]*([a-zA-Z"' ]*)/
 class DuckException < RuntimeError
 end
 
-def dd_list_filename(issue)
-  page = case issue
-         when 1..49
-           "bbttgdd1.htm"
-         when 50..109
-           "bbttgdd2.htm"
-         when 110..Float::INFINITY
-           "bbttgdd3.htm"
-         else
-           raise DuckException.new("Unknown issue #{issue}")
-         end
+def dd_list_filename(symbol, issue)
+  case symbol
+  when :dds
+    page = case issue
+           when 1..49
+             "bbttgdd1.htm"
+           when 50..109
+             "bbttgdd2.htm"
+           when 110..Float::INFINITY
+             "bbttgdd3.htm"
+           else
+             raise DuckException.new("Unknown issue #{issue}")
+           end
+  when :klassik
+    page = "bbtka.htm"
+  else
+    raise DuckException.new("Unknown symbol #{symbol}")
+  end
   File.join(DataDirectory, page)
 end
 
@@ -77,10 +101,11 @@ def get_story(url, name_de = nil)
   StoryData.new(name, year, name_de, inducks_id).to_h
 end
 
-def get_ddsh(issue)
-  $stderr.puts ".. #{issue}"
-  doc = Nokogiri::HTML(File.read(dd_list_filename(issue)))
-  x_table = doc.xpath("//th[a='#{Bookname} #{issue}']/../..")
+def get_ddsh(title_info, issue)
+  symbol = title_info[:symbol]
+  $stderr.puts ".. #{symbol} #{issue}"
+  doc = Nokogiri::HTML(File.read(dd_list_filename(symbol, issue)))
+  x_table = doc.xpath("//th[a='#{title_info[:bookname]} #{issue}']/../..")
   if x_table.empty?
     $stderr.puts "Warning: empty x_table for issue #{issue}"
     return []
@@ -105,13 +130,20 @@ def get_ddsh(issue)
   result
 end
 
-def all_issues(filename)
-  issues = File.read(filename).split("\n").map {|str| str.to_i}.uniq
-  issues.map {|issue| {:name => DDName, :vol => issue, :stories => get_ddsh(issue)}}
+def all_issues(symbols)
+  result = []
+  Titles.each do |title|
+    if symbols.include? title[:symbol]
+      symbol = title[:symbol]
+      title[:issues].each do |issue|
+        result << {:name => title[:name], :vol => issue, :stories => get_ddsh(title, issue)}
+      end
+    end
+  end
+  result
 end
 
 if $0 == __FILE__
-  puts all_issues(TargetIssues).to_yaml
-  # puts get_ddsh(50).inspect
+  puts all_issues(TargetSymbols).to_yaml
 end
 
