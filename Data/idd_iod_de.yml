@@ -1,0 +1,87 @@
+---
+- :name: Ich Donald Duck
+  :vol: 1
+  :stories:
+  - :name: Frozen Gold
+    :year: 1944
+    :name_de: Donald Duck am Nordpol
+    :inducks_id: W OS 62-02
+  - :name: Lost in the Andes
+    :year: 1948
+    :name_de: Donald Duck im Reich der Inkas
+    :inducks_id: W OS 223-02
+  - :name: Voodoo Hoodoo
+    :year: 1949
+    :name_de: Donald Duck in Afrika
+    :inducks_id: W OS 238-02
+  - :name: Luck of the North
+    :year: 1949
+    :name_de: Donald Duck und der Wikingerschatz
+    :inducks_id: W OS 256-02
+  - :name: Land of the Totem Poles
+    :year: 1949
+    :name_de: Donald Duck im Land der Totems
+    :inducks_id: W OS 263-02
+  - :name: Trail of the Unicorn
+    :year: 1949
+    :name_de: Donald Duck und das Einhorn
+    :inducks_id: W OS 263-03
+  - :name: A Christmas for Shacktown
+    :year: 1951
+    :name_de: Donald Duck und der Unglücksgroschen
+    :inducks_id: W OS 367-02
+  - :name: Maharajah Donald
+    :year: 1946
+    :name_de: Donald Duck in Indien
+    :inducks_id: W MOC 4-01
+- :name: Ich Onkel Dagobert
+  :vol: 1
+  :stories:
+  - :name: Christmas on Bear Mountain
+    :year: 1947
+    :name_de: Weihnachten auf dem Bärenberg
+    :inducks_id: W OS 178-02
+  - :name: The Old Castle's Secret
+    :year: 1947
+    :name_de: Onkel Dagobert und das Schloßgespenst
+    :inducks_id: W OS 189-02
+  - :name: The Twenty-Four Carat Moon
+    :year: 1958
+    :name_de: Onkel Dagobert und der goldene Mond
+    :inducks_id: W US 24-01
+  - :name: The Money Champ
+    :year: 1958
+    :name_de: Onkel Dagobert und der Kampf ums Geld
+    :inducks_id: W US 27-01
+  - :name: Pipeline to Danger
+    :year: 1959
+    :name_de: Onkel Dagobert als Erdölriese
+    :inducks_id: W US 30-01
+  - :name: The Golden Nugget Boat
+    :year: 1961
+    :name_de: Onkel Dagobert und das goldene Boot
+    :inducks_id: W US 35-02
+  - :name: The Midas Touch
+    :year: 1961
+    :name_de: Onkel Dagobert und die Hexe
+    :inducks_id: W US 36-01
+  - :name: Cave of Ali Baba
+    :year: 1961
+    :name_de: Onkel Dagobert und Ali Babas Höhle
+    :inducks_id: W US 37-02
+  - :name: The Unsafe Safe
+    :year: 1961
+    :name_de: Onkel Dagobert und der Glastresor
+    :inducks_id: W US 38-02
+  - :name: The Status Seeker
+    :year: 1962
+    :name_de: Onkel Dagobert und die feinen Leute
+    :inducks_id: W US 41-02
+  - :name: For Old Dime's Sake
+    :year: 1962
+    :name_de: Onkel Dagobert und sein unschlagbarer Geldspeicher
+    :inducks_id: W US 43-01
+  - :name: Crown of the Mayas
+    :year: 1962
+    :name_de: Onkel Dagobert und die Mayakrone
+    :inducks_id: W US 44-01

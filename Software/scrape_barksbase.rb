@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'yaml'
 
-TargetSymbols = [:klassik]
+TargetSymbols = [:idd, :iod]
 TitleInfo = Struct.new(:symbol, :name, :bookname, :issues)
 
 DdsTitles = [
@@ -17,10 +17,14 @@ DdsTitles = [
 DdsName = "Donald Duck Sonderheft"
 DdsBookname = "Die tollsten Geschichten von Donald Duck"
 KlassikName = "Die besten Geschichten mit Donald Duck - Klassik Album"
+IodName = "Ich Onkel Dagobert"
+IddName = "Ich Donald Duck"
 
 Titles = [
   TitleInfo.new(:dds, DdsName, DdsBookname, DdsTitles),
-  TitleInfo.new(:klassik, KlassikName, KlassikName, (1..20).to_a)
+  TitleInfo.new(:klassik, KlassikName, KlassikName, (1..20).to_a),
+  TitleInfo.new(:idd, IddName, IddName, [1]),
+  TitleInfo.new(:iod, IodName, IodName, [1]),
 ]
 
 UrlPrefix = "http://www.barksbase.de/deutsch/"
@@ -50,6 +54,10 @@ def dd_list_filename(symbol, issue)
            end
   when :klassik
     page = "bbtka.htm"
+  when :idd
+    page = "idd.htm"
+  when :iod
+    page = "iod.htm"
   else
     raise DuckException.new("Unknown symbol #{symbol}")
   end
