@@ -937,6 +937,13 @@
     :name_de: Der Milchmann
     :inducks_id: CS WDC '57
 - :name: Donald Duck Sonderheft
+  :vol: 139
+  :stories:
+  - :name: Mythtic Mystery
+    :year: 1960
+    :name_de: Der magische Hammer von Walhalla
+    :inducks_id: W US 34-01
+- :name: Donald Duck Sonderheft
   :vol: 142
   :stories:
   - :name: The Training Farm Fuss
