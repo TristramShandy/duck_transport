@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'yaml'
 
-TargetSymbols = [:cbl_dda]
+TargetSymbols = [:cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcg, :cbl_uscop, :cbl_wdcs]
 TitleInfo = Struct.new(:symbol, :name, :bookname, :issues)
 
 DdsTitles = [
@@ -25,10 +25,10 @@ CblDdaName = "The Carl Barks Library in Color - Donald Duck Adventures"
 CblDdaBookname = "CBLC-DDA"
 CblGgcfName = "The Carl Barks Library in Color - Gyro Gearlose Comics and Fillers"
 CblGgcfBookname = "CBLC-GG"
-CblDdcgcName = "The Carl Barks Library in Color - Donald Duck Christmas Giveaways"
-CblDdcgcBookname = "CBLC-FCG"
+CblDdcgName = "The Carl Barks Library in Color - Donald Duck Christmas Giveaways"
+CblDdcgBookname = "CBLC-FCG"
 CblUscopName = "The Carl Barks Library in Color - Uncle Scrooge Comics One Pagers"
-CblUscopBookname = "CBLC-USCOP"
+CblUscopBookname = "CBLC-USOP"
 CblWdcsName = "The Carl Barks Library in Color - Walt Disney's Comics and Stories"
 CblWdcsBookname = "CBLC-WDC"
 
@@ -40,7 +40,7 @@ Titles = [
   TitleInfo.new(:cbl_usa, CblUsaName, CblUsaBookname, [1]),
   TitleInfo.new(:cbl_dda, CblDdaName, CblDdaBookname, [1]),
   TitleInfo.new(:cbl_ggcf, CblGgcfName, CblGgcfBookname, [1]),
-  TitleInfo.new(:cbl_ddcgc, CblDdcgcName, CblDdcgcBookname, [1]),
+  TitleInfo.new(:cbl_ddcg, CblDdcgName, CblDdcgBookname, [1]),
   TitleInfo.new(:cbl_uscop, CblUscopName, CblUscopBookname, [1, 2]),
   TitleInfo.new(:cbl_wdcs, CblWdcsName, CblWdcsBookname, [1]),
 ]
@@ -76,7 +76,7 @@ def dd_list_filename(symbol, issue)
     page = "idd.htm"
   when :iod
     page = "iod.htm"
-  when :cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcgc, :cbl_uscop, :cbl_wdcs
+  when :cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcg, :cbl_uscop, :cbl_wdcs
     page = "#{symbol}.htm"
   else
     raise DuckException.new("Unknown symbol #{symbol}")
@@ -96,6 +96,8 @@ end
 
 def parse_infoline(line)
   if line =~ /E: (\d\d\d\d)/
+    $1.to_i
+  elsif line =~ /V: (\d\d\d\d)/
     $1.to_i
   else
     raise DuckException.new("Unable to parse infoline #{line}")
