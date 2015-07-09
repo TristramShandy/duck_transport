@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'yaml'
 
-TargetSymbols = [:idd, :iod]
+TargetSymbols = [:cbl_dda]
 TitleInfo = Struct.new(:symbol, :name, :bookname, :issues)
 
 DdsTitles = [
@@ -22,15 +22,15 @@ IddName = "Ich Donald Duck"
 CblUsaName = "The Carl Barks Library in Color - Uncle Scrooge Adventures"
 CblUsaBookname = "CBLC-USA"
 CblDdaName = "The Carl Barks Library in Color - Donald Duck Adventures"
-CblDdaBookname = "CBLC-USA"
+CblDdaBookname = "CBLC-DDA"
 CblGgcfName = "The Carl Barks Library in Color - Gyro Gearlose Comics and Fillers"
-CblGgcfBookname = "CBLC-USA"
+CblGgcfBookname = "CBLC-GG"
 CblDdcgcName = "The Carl Barks Library in Color - Donald Duck Christmas Giveaways"
-CblDdcgcBookname = "CBLC-USA"
+CblDdcgcBookname = "CBLC-FCG"
 CblUscopName = "The Carl Barks Library in Color - Uncle Scrooge Comics One Pagers"
-CblUscopBookname = "CBLC-USA"
+CblUscopBookname = "CBLC-USCOP"
 CblWdcsName = "The Carl Barks Library in Color - Walt Disney's Comics and Stories"
-CblWdcsBookname = "CBLC-USA"
+CblWdcsBookname = "CBLC-WDC"
 
 Titles = [
   TitleInfo.new(:dds, DdsName, DdsBookname, DdsTitles),
