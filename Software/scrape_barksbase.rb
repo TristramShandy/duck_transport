@@ -19,12 +19,30 @@ DdsBookname = "Die tollsten Geschichten von Donald Duck"
 KlassikName = "Die besten Geschichten mit Donald Duck - Klassik Album"
 IodName = "Ich Onkel Dagobert"
 IddName = "Ich Donald Duck"
+CblUsaName = "The Carl Barks Library in Color - Uncle Scrooge Adventures"
+CblUsaBookname = "CBLC-USA"
+CblDdaName = "The Carl Barks Library in Color - Donald Duck Adventures"
+CblDdaBookname = "CBLC-USA"
+CblGgcfName = "The Carl Barks Library in Color - Gyro Gearlose Comics and Fillers"
+CblGgcfBookname = "CBLC-USA"
+CblDdcgcName = "The Carl Barks Library in Color - Donald Duck Christmas Giveaways"
+CblDdcgcBookname = "CBLC-USA"
+CblUscopName = "The Carl Barks Library in Color - Uncle Scrooge Comics One Pagers"
+CblUscopBookname = "CBLC-USA"
+CblWdcsName = "The Carl Barks Library in Color - Walt Disney's Comics and Stories"
+CblWdcsBookname = "CBLC-USA"
 
 Titles = [
   TitleInfo.new(:dds, DdsName, DdsBookname, DdsTitles),
   TitleInfo.new(:klassik, KlassikName, KlassikName, (1..20).to_a),
   TitleInfo.new(:idd, IddName, IddName, [1]),
   TitleInfo.new(:iod, IodName, IodName, [1]),
+  TitleInfo.new(:cbl_usa, CblUsaName, CblUsaBookname, [1]),
+  TitleInfo.new(:cbl_dda, CblDdaName, CblDdaBookname, [1]),
+  TitleInfo.new(:cbl_ggcf, CblGgcfName, CblGgcfBookname, [1]),
+  TitleInfo.new(:cbl_ddcgc, CblDdcgcName, CblDdcgcBookname, [1]),
+  TitleInfo.new(:cbl_uscop, CblUscopName, CblUscopBookname, [1, 2]),
+  TitleInfo.new(:cbl_wdcs, CblWdcsName, CblWdcsBookname, [1]),
 ]
 
 UrlPrefix = "http://www.barksbase.de/deutsch/"
@@ -58,6 +76,8 @@ def dd_list_filename(symbol, issue)
     page = "idd.htm"
   when :iod
     page = "iod.htm"
+  when :cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcgc, :cbl_uscop, :cbl_wdcs
+    page = "#{symbol}.htm"
   else
     raise DuckException.new("Unknown symbol #{symbol}")
   end
@@ -109,10 +129,7 @@ def get_story(url, name_de = nil)
   StoryData.new(name, year, name_de, inducks_id).to_h
 end
 
-def get_ddsh(title_info, issue)
-  symbol = title_info[:symbol]
-  $stderr.puts ".. #{symbol} #{issue}"
-  doc = Nokogiri::HTML(File.read(dd_list_filename(symbol, issue)))
+def get_book_ddsh(doc, title_info, issue)
   x_table = doc.xpath("//th[a='#{title_info[:bookname]} #{issue}']/../..")
   if x_table.empty?
     $stderr.puts "Warning: empty x_table for issue #{issue}"
@@ -136,6 +153,26 @@ def get_ddsh(title_info, issue)
   end
   raise DuckException.new("Did not find issue #{issue}") if result.empty?
   result
+end
+
+def get_cbl_ddsh(doc, title_info, issue)
+  x_info = doc.xpath("//strong[a='#{title_info[:bookname]} #{issue}']/../../div[@class='bbipub']/a")
+  if x_info.empty?
+    $stderr.puts "Warning: empty x_info for issue #{issue}"
+    return []
+  end
+  x_info.map {|info| get_story(info["href"])}
+end
+
+def get_ddsh(title_info, issue)
+  symbol = title_info[:symbol]
+  $stderr.puts ".. #{symbol} #{issue}"
+  doc = Nokogiri::HTML(File.read(dd_list_filename(symbol, issue)))
+  if symbol.to_s =~ /^cbl_/
+    get_cbl_ddsh(doc, title_info, issue)
+  else
+    get_book_ddsh(doc, title_info, issue)
+  end
 end
 
 def all_issues(symbols)
