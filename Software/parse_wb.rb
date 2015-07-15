@@ -61,10 +61,9 @@ def plot_counts(stories, min_nr_pages = 2)
 
   g = Gruff::Bar.new(PlotSize)
   g.y_axis_increment = 5
-  g.title = "Stories per year"
+  g.title = "Multipage stories per year"
   g.labels = labels
   g.data(:nr, heights)
-  puts heights.inspect
   g.write(PlotName)
 end
 
