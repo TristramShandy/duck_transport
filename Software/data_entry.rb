@@ -3,34 +3,43 @@ require './movement'
 
 Filename = "../Data/duck_movement_test.db"
 
-class DuckEntry < Qt::Widget
-  slots :enter_movement, :set_moves, :sync, 'change_stories(int)'
+class DuckMovementEntry < Qt::Widget
+  slots :enter_movement, :set_moves, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)'
   MovementEdits = [:origin_place, :origin_time, :destination_place, :destination_time, :movement_mode, :purpose, :comment]
+  MovementIx = (2..8).to_a
+
+  NrWhoCols = 5
+  MaxNrMoves = 20
 
   def initialize(filename)
     super()
     @filename = filename
     @movement = DuckMovement.new(@filename)
     @edits = {}
+    @duck_names = []
+    @edit_mode = nil
     setWindowTitle "Duck Movement"
     setToolTip "Enter Movement"
     init_ui
-    resize 800, 600
+    resize 800, 800
     show
   end
 
   def init_ui
+    @move_to_edit = Qt::SignalMapper.new self
+    connect @move_to_edit, SIGNAL('mapped(int)'), self, SLOT('edit_move(int)')
+
     vbox = Qt::VBoxLayout.new self
     hbox = Qt::HBoxLayout.new
 
-    button_enter = Qt::PushButton.new 'Enter', self
+    @button_enter = Qt::PushButton.new 'Enter', self
     button_sync = Qt::PushButton.new 'Sync', self
     button_quit = Qt::PushButton.new 'Quit', self
     hbox.addWidget button_quit, 1, Qt::AlignLeft
     hbox.addStretch 1
     hbox.addWidget button_sync, 1, Qt::AlignLeft
     hbox.addStretch 1
-    hbox.addWidget button_enter, 1, Qt::AlignLeft
+    hbox.addWidget @button_enter, 1, Qt::AlignLeft
 
     vbox.addWidget Qt::Label.new "Enter Movement"
 
@@ -51,30 +60,29 @@ class DuckEntry < Qt::Widget
 
     who_box = Qt::HBoxLayout.new
     who_box.addWidget Qt::Label.new "who", self
-    @current_who = []
-    @movement.data[:persons].each do |person|
-      who_check = Qt::CheckBox.new person[1], self
-      who_box.addWidget who_check
-      @current_who << who_check
-    end
+    @who_grid = Qt::GridLayout.new
+    @who_grid.horizontalSpacing = 20
+    set_ducks
+    who_box.addLayout @who_grid
     vbox.addLayout who_box
 
     MovementEdits.each {|col| vbox.addLayout(text_entry(col))}
 
-    move_box = Qt::HBoxLayout.new
-    move_box.addWidget Qt::Label.new "Movements", self
-    @current_moves = Qt::TextEdit.new self
-    @current_moves.readOnly = true
+    @move_box = Qt::HBoxLayout.new
+    move_label = Qt::Label.new "Movements", self
+    @move_box.addWidget move_label
+    @current_moves = Qt::VBoxLayout.new
+    init_moves
     set_moves
-    move_box.addWidget @current_moves
-    vbox.addLayout move_box
+    @move_box.addLayout @current_moves
+    vbox.addLayout @move_box
 
     vbox.addStretch 1
     vbox.addLayout hbox
 
     connect button_quit, SIGNAL('clicked()'), $qApp, SLOT('quit()')
     connect button_sync, SIGNAL('clicked()'), self, SLOT('sync()')
-    connect button_enter, SIGNAL('clicked()'), self, SLOT('enter_movement()')
+    connect @button_enter, SIGNAL('clicked()'), self, SLOT('enter_movement()')
     connect @current_book, SIGNAL('currentIndexChanged(int)'), self, SLOT('change_stories(int)')
     connect @current_story, SIGNAL('currentIndexChanged(int)'), self, SLOT('set_moves()')
   end
@@ -90,13 +98,46 @@ class DuckEntry < Qt::Widget
   end
 
   def enter_movement
-    movement_row = MovementEdits.map {|col| @edits[col].displayText }
     person_row = []
-    @current_who.each {|who| person_row << who.text if who.isChecked}
-    movement_row.unshift person_row.join(', ')
-    story_id = @story_list[@current_story.currentIndex][0]
-    @movement.add_movement(movement_row, person_row, story_id)
-    set_moves
+    person_ids = []
+    @current_who.each_with_index do |who, ix|
+      if who.isChecked
+        person_row << who.text 
+        person_ids << @movement.data[:persons][ix][0]
+      end
+    end
+    person_ids.sort!
+
+    if @edit_mode
+      mov = @movement.movement_by_id @edit_mode
+      move_id = @edit_mode
+      MovementEdits.each_with_index do |col, ix|
+        txt = @edits[col].displayText
+        if txt != mov[MovementIx[ix]]
+          @movement.change(:movements, col, txt, move_id)
+        end
+      end
+
+      old_person_ids = @movement.persons_by_movement(move_id).sort
+      if person_ids != old_person_ids
+        @movement.change(:movements, :movers, person_row.join(', '), move_id)
+        (person_ids - old_person_ids).each do |new_persons|
+          @movement.add(:person_movement, [move_id, new_persons])
+        end
+        (old_person_ids - person_ids).each do |old_persons|
+          @movement.remove_person_movement(move_id, old_persons)
+        end
+      end
+      @edit_mode = nil
+      @button_enter.text = "Enter"
+      sync
+    else
+      movement_row = MovementEdits.map {|col| @edits[col].displayText }
+      movement_row.unshift person_row.join(', ')
+      story_id = @story_list[@current_story.currentIndex][0]
+      @movement.add_movement(movement_row, person_row, story_id)
+      set_moves
+    end
   end
 
   def change_stories(ix)
@@ -138,19 +179,77 @@ class DuckEntry < Qt::Widget
     set_moves if @current_moves
   end
 
+  def init_moves
+    @move_edits = []
+    @move_buttons = []
+    MaxNrMoves.times do |mov|
+      layout = Qt::HBoxLayout.new
+      mov_edit = Qt::Label.new self
+      layout.addWidget mov_edit
+      @move_edits << mov_edit
+      layout.addStretch 1
+      mov_button = Qt::PushButton.new "Edit", self
+      layout.addWidget mov_button
+      @move_buttons << mov_button
+      connect mov_button, SIGNAL('clicked()'), @move_to_edit, SLOT('map()')
+      @move_to_edit.setMapping(mov_button, mov)
+      @current_moves.addLayout layout
+    end
+  end
+
   def set_moves
     story_id = @story_list[@current_story.currentIndex][0]
-    strs = []
-    @movement.movements_by_story(story_id).each {|mov| strs << mov.join(" | ")}
-    @current_moves.setText(strs.join("\n"))
+    @display_movs = @movement.movements_by_story(story_id)
+    @display_movs = @display_movs[-MaxNrMoves .. -1] if @display_movs.size > MaxNrMoves
+    nr_movs = @display_movs.size
+    MaxNrMoves.times do |i_mov|
+      if i_mov < nr_movs
+        @move_edits[i_mov].text = @display_movs[i_mov][1..-2].join(" | ")
+        @move_buttons[i_mov].setEnabled(true)
+      else
+        @move_edits[i_mov].text = ""
+        @move_buttons[i_mov].setEnabled(false)
+      end
+    end
+  end
+
+  def set_ducks
+    @current_who ||= []
+    nr_ducks = @duck_names.size
+    @movement.data[:persons].each_with_index do |person, i|
+      if i < nr_ducks
+        @duck_names[i].text = person[1]
+      else
+        who_check = Qt::CheckBox.new person[1], self
+        @duck_names << who_check
+        @who_grid.addWidget(who_check, i / NrWhoCols, i % NrWhoCols)
+        @current_who << who_check
+      end
+    end
   end
 
   def sync
     @movement = DuckMovement.new(@filename)
     set_books
+    set_ducks
+  end
+
+  def edit_move(move_ix)
+    move_id = @display_movs[move_ix][0]
+    @edit_mode = move_id
+    @button_enter.text = "Change"
+    mov = @movement.movement_by_id(move_id)
+    MovementEdits.each_with_index do |name, i|
+      @edits[name].text = mov[MovementIx[i]]
+    end
+
+    pids = @movement.persons_by_movement(move_id)
+    @movement.data[:persons].each_with_index do |per, i|
+      @duck_names[i].setChecked(pids.include?(per[0]))
+    end
   end
 end
 
 app = Qt::Application.new ARGV
-DuckEntry.new(Filename)
+DuckMovementEntry.new(Filename)
 app.exec
