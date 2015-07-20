@@ -5,8 +5,8 @@ Filename = "../Data/duck_movement_test.db"
 
 class DuckMovementEntry < Qt::Widget
   slots :enter_movement, :set_moves, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)'
-  MovementEdits = [:origin_place, :origin_time, :destination_place, :destination_time, :movement_mode, :purpose, :comment]
-  MovementIx = (2..8).to_a
+  MovementEdits = [:origin_place, :origin_time, :destination_place, :destination_time, :movement_mode, :purpose, :comment, :trip_index]
+  MovementIx = (2..8).to_a + [10]
 
   NrWhoCols = 5
   MaxNrMoves = 20
@@ -91,6 +91,7 @@ class DuckMovementEntry < Qt::Widget
     hbox = Qt::HBoxLayout.new
     label = Qt::Label.new name.to_s, self
     edit = Qt::LineEdit.new self
+    edit.setInputMask("999") if name == :trip_index
     hbox.addWidget label, 1
     hbox.addWidget edit, 3
     @edits[name]= edit
@@ -113,6 +114,7 @@ class DuckMovementEntry < Qt::Widget
       move_id = @edit_mode
       MovementEdits.each_with_index do |col, ix|
         txt = @edits[col].displayText
+        txt = txt.to_i if col == :trip_index
         if txt != mov[MovementIx[ix]]
           @movement.change(:movements, col, txt, move_id)
         end
@@ -204,7 +206,7 @@ class DuckMovementEntry < Qt::Widget
     nr_movs = @display_movs.size
     MaxNrMoves.times do |i_mov|
       if i_mov < nr_movs
-        @move_edits[i_mov].text = @display_movs[i_mov][1..-2].join(" | ")
+        @move_edits[i_mov].text = @display_movs[i_mov].values_at(*MovementIx).join(" | ")
         @move_buttons[i_mov].setEnabled(true)
       else
         @move_edits[i_mov].text = ""

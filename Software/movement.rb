@@ -7,7 +7,7 @@ class DuckMovement
     :books => [:id, :name, :volume],
     :stories => [:id, :name, :year, :name_de, :inducks_id],
     :stories_in_books => [:id, :story_id, :book_id, :page_start, :page_end],
-    :movements => [:id, :movers, :origin_place, :origin_time, :destination_place, :destination_time, :movement_mode, :purpose, :comment, :story_id],
+    :movements => [:id, :movers, :origin_place, :origin_time, :destination_place, :destination_time, :movement_mode, :purpose, :comment, :story_id, :trip_index],
     :persons => [:id, :name],
     :person_movement => [:movement_id, :person_id]
   }
@@ -48,8 +48,8 @@ class DuckMovement
     (["?"] * nr).join(', ')
   end
 
-  def add_movement(movement, persons, story_id)
-    movement << story_id
+  def add_movement(movement_pre, persons, story_id)
+    movement = movement_pre[0...-1] + [story_id, movement_pre[-1]]
     add(:movements, movement)
     mid = @db.last_insert_row_id
     persons.each do |name|
