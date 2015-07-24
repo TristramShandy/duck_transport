@@ -4,7 +4,8 @@ require 'open-uri'
 require 'nokogiri'
 require 'yaml'
 
-TargetSymbols = [:cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcg, :cbl_uscop, :cbl_wdcs]
+# TargetSymbols = [:cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcg, :cbl_uscop, :cbl_wdcs, :bcs]
+TargetSymbols = [:bcs]
 TitleInfo = Struct.new(:symbol, :name, :bookname, :issues)
 
 DdsTitles = [
@@ -31,6 +32,8 @@ CblUscopName = "The Carl Barks Library in Color - Uncle Scrooge Comics One Pager
 CblUscopBookname = "CBLC-USOP"
 CblWdcsName = "The Carl Barks Library in Color - Walt Disney's Comics and Stories"
 CblWdcsBookname = "CBLC-WDC"
+BcsName = "Barks Comics & Stories"
+BcsBookname = "Barks Comics & Stories"
 
 Titles = [
   TitleInfo.new(:dds, DdsName, DdsBookname, DdsTitles),
@@ -43,14 +46,13 @@ Titles = [
   TitleInfo.new(:cbl_ddcg, CblDdcgName, CblDdcgBookname, [1]),
   TitleInfo.new(:cbl_uscop, CblUscopName, CblUscopBookname, [1, 2]),
   TitleInfo.new(:cbl_wdcs, CblWdcsName, CblWdcsBookname, [1]),
+  TitleInfo.new(:bcs, BcsName, BcsBookname, [2, 4, 6, 7, 9, 10]),
 ]
 
 UrlPrefix = "http://www.barksbase.de/deutsch/"
 DataDirectory = "../Data"
 
 StoryData = Struct.new(:name, :year, :name_de, :inducks_id)
-
-TargetIssues = "../Data/dds.txt"
 
 ReCBLTitel = /CBL-Titel[^a-zA-Z]*([a-zA-Z"' ]*)/
 
@@ -76,7 +78,7 @@ def dd_list_filename(symbol, issue)
     page = "idd.htm"
   when :iod
     page = "iod.htm"
-  when :cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcg, :cbl_uscop, :cbl_wdcs
+  when :cbl_usa, :cbl_dda, :cbl_ggcf, :cbl_ddcg, :cbl_uscop, :cbl_wdcs, :bcs
     page = "#{symbol}.htm"
   else
     raise DuckException.new("Unknown symbol #{symbol}")

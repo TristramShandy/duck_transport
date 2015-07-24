@@ -1,0 +1,385 @@
+---
+- :name: Barks Comics & Stories
+  :vol: 2
+  :stories:
+  - :name: Farragut the Falcon
+    :year: 1944
+    :name_de: Der Falke Farragat
+    :inducks_id: W WDC 47-02
+  - :name: The Purloined Putty
+    :year: 1944
+    :name_de: Gepumpter Glaserkitt
+    :inducks_id: W WDC 48-02
+  - :name: High Wire Daredevils
+    :year: 1944
+    :name_de: Auf dem hohen Seil
+    :inducks_id: W WDC 49-02
+  - :name: Ten Cents Worth of Trouble
+    :year: 1944
+    :name_de: |-
+      Donald, der Münzsammler/
+      Die Jagd nach dem Zehner
+    :inducks_id: W WDC 50-02
+  - :name: Donald's Bay Lot
+    :year: 1944
+    :name_de: Rache ist süß
+    :inducks_id: W WDC 51-02
+  - :name: Thievery Afoot
+    :year: 1944
+    :name_de: Tauschhändel
+    :inducks_id: W WDC 52-02
+  - :name: The Tramp Steamer
+    :year: 1944
+    :name_de: Seemannslos
+    :inducks_id: W WDC 53-02
+  - :name: The Long Race to Pumpkinburg
+    :year: 1944
+    :name_de: Wettlauf auf dem Eis
+    :inducks_id: W WDC 54-02
+  - :name: Donald Learns the Ropes
+    :year: 1944
+    :name_de: Cowboy-Künste
+    :inducks_id: W WDC 55-02
+  - :name: The Icebox Robber
+    :year: 1945
+    :name_de: Der Schlafwandler
+    :inducks_id: W WDC 56-02
+  - :name: Pecking Order
+    :year: 1945
+    :name_de: Der Herrenspecht
+    :inducks_id: W WDC 57-02
+  - :name: Taming the Rapids
+    :year: 1945
+    :name_de: Retter in der Not
+    :inducks_id: W WDC 58-02
+  - :name: Days at the Lazy K
+    :year: 1945
+    :name_de: Reine Liebe und Güte
+    :inducks_id: W WDC 59-01
+  - :name: Eyes in the Dark
+    :year: 1945
+    :name_de: Das Radargerät
+    :inducks_id: W WDC 60-02
+  - :name: Thug Busters
+    :year: 1945
+    :name_de: |-
+      Die großen Detektive/
+      Das Detektivspiel
+    :inducks_id: W WDC 61-02
+- :name: Barks Comics & Stories
+  :vol: 4
+  :stories:
+  - :name: Going Buggy
+    :year: 1946
+    :name_de: Der Käferkiller
+    :inducks_id: W WDC 77-02
+  - :name: Jam Robbers
+    :year: 1946
+    :name_de: Die Erdölaktie
+    :inducks_id: W WDC 78-02
+  - :name: Picnic Tricks
+    :year: 1946
+    :name_de: Unvergeßliches Picknick
+    :inducks_id: W WDC 79-02
+  - :name: Donald's Posy Patch
+    :year: 1947
+    :name_de: Blaue Blütenpracht
+    :inducks_id: W WDC 80-02
+  - :name: Donald Mines His Own Business
+    :year: 1947
+    :name_de: Die Goldgrube
+    :inducks_id: W WDC 81-02
+  - :name: Magical Misery
+    :year: 1947
+    :name_de: Zauberkunststücke
+    :inducks_id: W WDC 82-02
+  - :name: Vacation Time
+    :year: 1947
+    :name_de: Friedliche Ferien
+    :inducks_id: W WDC 83-02
+  - :name: The Waltz King
+    :year: 1947
+    :name_de: Der Walzerkönig
+    :inducks_id: W WDC 84-02
+  - :name: Atonal Terror
+    :year: 1947
+    :name_de: Musikalischer Unfug
+    :inducks_id: W WDC 85-02
+  - :name: Fireman Donald
+    :year: 1947
+    :name_de: Donald bei der Feuerwehr
+    :inducks_id: W WDC 86-02
+  - :name: The Terrible Turkey
+    :year: 1947
+    :name_de: Jagdfieber
+    :inducks_id: W WDC 87-02
+  - :name: Wintertime Wager
+    :year: 1947
+    :name_de: Die Wette
+    :inducks_id: W WDC 88-02
+  - :name: Watching the Watchman
+    :year: 1947
+    :name_de: Eine Schreckensnacht
+    :inducks_id: W WDC 89-02
+  - :name: Wired
+    :year: 1947
+    :name_de: Vergebliches Streben
+    :inducks_id: W WDC 90-02
+  - :name: Going Ape
+    :year: 1947
+    :name_de: Eine Party der peinlichen Art
+    :inducks_id: W WDC 91-02
+- :name: Barks Comics & Stories
+  :vol: 6
+  :stories:
+  - :name: Super Snooper
+    :year: 1949
+    :name_de: Der Supermensch
+    :inducks_id: W WDC 107-02
+  - :name: The Great Duckburg Frog Jumping Contest
+    :year: 1949
+    :name_de: Vorsicht, Turnierfrosch!
+    :inducks_id: W WDC 108-02
+  - :name: Dowsing Ducks
+    :year: 1949
+    :name_de: Die Wünschelrute
+    :inducks_id: W WDC 109-02
+  - :name: The Goldilocks Gambit
+    :year: 1949
+    :name_de: Ein Bärenspaß
+    :inducks_id: W WDC 110-02
+  - :name: Donald's Love Letters
+    :year: 1949
+    :name_de: Die vertauschten Briefe
+    :inducks_id: W WDC 111-02
+  - :name: Rip van Donald
+    :year: 1949
+    :name_de: Ein toller Schwindel
+    :inducks_id: W WDC 112-02
+  - :name: Mission to Codfish Cove
+    :year: 1949
+    :name_de: Die falsche Flasche
+    :inducks_id: W WDC 114-02
+  - :name: Wild about Flowers
+    :year: 1949
+    :name_de: Das Frühlingspicknick
+    :inducks_id: W WDC 117-02
+  - :name: Billions to Sneeze at
+    :year: 1950
+    :name_de: Wehe dem, der Schulden macht
+    :inducks_id: W WDC 124-02
+  - :name: Donald Duck
+    :year: 1950
+    :name_de: Test am Graupelpaß
+    :inducks_id: W WDC 125-02
+  - :name: A Financial Fable
+    :year: 1950
+    :name_de: Geld fällt vom Himmel
+    :inducks_id: W WDC 126-02
+  - :name: April Foolers
+    :year: 1950
+    :name_de: April! April!
+    :inducks_id: W WDC 127-02
+  - :name: Knightly Rivals
+    :year: 1950
+    :name_de: Ritter Eisenbeiß
+    :inducks_id: W WDC 128-02
+  - :name: Pool Sharks
+    :year: 1950
+    :name_de: Gartenfreuden
+    :inducks_id: W WDC 129-02
+  - :name: The Trouble with Dimes
+    :year: 1950
+    :name_de: Seltene Münzen
+    :inducks_id: W WDC 130-02
+- :name: Barks Comics & Stories
+  :vol: 7
+  :stories:
+  - :name: Gladstone's Luck
+    :year: 1951
+    :name_de: Himmelhoch jauchzend, zu Tode betrübt
+    :inducks_id: W WDC 131-02
+  - :name: Ten Star Generals
+    :year: 1951
+    :name_de: Orden und Ehrenzeichen
+    :inducks_id: W WDC 132-02
+  - :name: Grandma Duck
+    :year: 1951
+    :name_de: Oma Duck und der Einbrecher!
+    :inducks_id: W WDC 132-04
+  - :name: The Truant Nephews
+    :year: 1951
+    :name_de: Die Schulschwänzer
+    :inducks_id: W WDC 133-02
+  - :name: Terror of the Beagle Boys
+    :year: 1951
+    :name_de: |-
+      Donald Duck und sein reicher Onkel in Amerika/
+      Der Selbstschuß
+    :inducks_id: W WDC 134-02
+  - :name: The Big Bin on Killmotor Hill
+    :year: 1951
+    :name_de: Eingefrorenes Geld
+    :inducks_id: W WDC 135-02
+  - :name: Gladstone's Usual Very Good Year
+    :year: 1951
+    :name_de: Spielleidenschaft
+    :inducks_id: W WDC 136-02
+  - :name: The Screaming Cowboy
+    :year: 1951
+    :name_de: Der Schnee-Einsiedel
+    :inducks_id: W WDC 137-02
+  - :name: Statuesque Spendthrifts
+    :year: 1951
+    :name_de: Der reichste Mann der Welt
+    :inducks_id: W WDC 138-02
+  - :name: Rocket Wing Saves the Day
+    :year: 1951
+    :name_de: Die Reisetaube
+    :inducks_id: W WDC 139-02
+  - :name: Gladstone's Terrible Secret
+    :year: 1951
+    :name_de: Eine peinliche Enthüllung
+    :inducks_id: W WDC 140-02
+  - :name: The Think Box Bollix
+    :year: 1951
+    :name_de: Die Intelligenzstrahlen
+    :inducks_id: W WDC 141-02
+  - :name: Houseboat Holiday
+    :year: 1952
+    :name_de: Friedliche Ferien
+    :inducks_id: W WDC 142-02
+  - :name: Gemstone Hunters
+    :year: 1952
+    :name_de: Angeber oder Glückspilz?
+    :inducks_id: W WDC 143-01
+  - :name: Spending Money
+    :year: 1952
+    :name_de: Die Kunst, Geld auszugeben
+    :inducks_id: W WDC 144-01
+- :name: Barks Comics & Stories
+  :vol: 9
+  :stories:
+  - :name: Donald Duck and the Hammy Camel
+    :year: 1953
+    :name_de: Das Leuchtkamel
+    :inducks_id: W WDC 160-01
+  - :name: Donald Duck
+    :year: 1953
+    :name_de: Selbst ist der Mann
+    :inducks_id: W WDC 161-01
+  - :name: Turkey Trot at One Whistle
+    :year: 1953
+    :name_de: Der heldenmütige Stationsvorstand
+    :inducks_id: W WDC 162-01
+  - :name: Raffle Reversal
+    :year: 1953
+    :name_de: Glückspilz und Pechvogel
+    :inducks_id: W WDC 163-01
+  - :name: Flour Follies
+    :year: 1953
+    :name_de: Das Wundermehl
+    :inducks_id: W WDC 164-01
+  - :name: The Price of Fame
+    :year: 1953
+    :name_de: Der Weg zum Ruhm
+    :inducks_id: W WDC 165-01
+  - :name: Donald Duck
+    :year: 1953
+    :name_de: Der rasende Rennfahrer
+    :inducks_id: W WDC 166-01
+  - :name: Salmon Derby
+    :year: 1953
+    :name_de: Anglerfreuden
+    :inducks_id: W WDC 167-01
+  - :name: Cheltenham's Choice
+    :year: 1953
+    :name_de: Eichendorfs Werke
+    :inducks_id: W WDC 168-01
+  - :name: Travelling Truants
+    :year: 1954
+    :name_de: Die Ausreißer
+    :inducks_id: W WDC 169-03
+  - :name: Donald Duck
+    :year: 1954
+    :name_de: Die fleißigen Ameisen
+    :inducks_id: W WDC 170-03
+  - :name: The Too
+    :year: 1954
+    :name_de: Kummer mit Kunststoff
+    :inducks_id: W WDC 171-03
+  - :name: Search for the Cuspidoria
+    :year: 1954
+    :name_de: Weihnachtsüberraschungen
+    :inducks_id: W WDC 172-01
+  - :name: New Year's Revolutions
+    :year: 1954
+    :name_de: Gute Vorsätze
+    :inducks_id: W WDC 173-02
+  - :name: Donald Duck
+    :year: 1954
+    :name_de: Der Hilfsbrieftaubenpostbote
+    :inducks_id: W WDC 174-02
+- :name: Barks Comics & Stories
+  :vol: 10
+  :stories:
+  - :name: The Daffy Taffy Pull
+    :year: 1954
+    :name_de: Das große Bonbon-Malheur
+    :inducks_id: W WDC 175-01
+  - :name: The Ghost Sheriff of Last Gasp
+    :year: 1954
+    :name_de: Der Geist mit dem Schluckauf
+    :inducks_id: W WDC 176-02
+  - :name: A Descent Interval
+    :year: 1954
+    :name_de: Der tollkühne Taucher
+    :inducks_id: W WDC 177-01
+  - :name: Donald's Raucous Role
+    :year: 1954
+    :name_de: Nächtliche Ruhestörung
+    :inducks_id: W WDC 178-02
+  - :name: Good Canoes and Bad Canoes
+    :year: 1954
+    :name_de: Glück im Unglück
+    :inducks_id: W WDC 179-02
+  - :name: Trouble Indemnity
+    :year: 1955
+    :name_de: Berufssorgen
+    :inducks_id: W WDC 180-01
+  - :name: Donald Duck
+    :year: 1955
+    :name_de: Die braven Brückenbauer
+    :inducks_id: W WDC 181-01
+  - :name: The Unorthodox Ox
+    :year: 1955
+    :name_de: Das Horoskop
+    :inducks_id: W WDC 182-01
+  - :name: The Custard Gun
+    :year: 1955
+    :name_de: Das Senfgewehr
+    :inducks_id: W WDC 183-01
+  - :name: Three Un
+    :year: 1955
+    :name_de: Die Weihnachtswäsche
+    :inducks_id: W WDC 184-01
+  - :name: Secret Resolutions
+    :year: 1955
+    :name_de: Gute Vorsätze
+    :inducks_id: W WDC 185-02
+  - :name: Donald Duck
+    :year: 1955
+    :name_de: Der Sofaexpreß
+    :inducks_id: W WDC 186-02
+  - :name: Searching for a Successor
+    :year: 1955
+    :name_de: Die Prüfung
+    :inducks_id: W WDC 187-01
+  - :name: The Olympic Hopeful
+    :year: 1955
+    :name_de: Die olympische Idee
+    :inducks_id: W WDC 188-01
+  - :name: Gopher Goof
+    :year: 1955
+    :name_de: Das harte Naturgesetz
+    :inducks_id: W WDC 189-01
