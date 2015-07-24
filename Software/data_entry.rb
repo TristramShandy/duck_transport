@@ -1,7 +1,7 @@
 require 'Qt'
 require './movement'
 
-Filename = "../Data/duck_movement_test.db"
+Filename = "duck_movement.db"
 
 class DuckMovementEntry < Qt::Widget
   slots :enter_movement, :set_moves, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)'
@@ -9,7 +9,7 @@ class DuckMovementEntry < Qt::Widget
   MovementIx = (2..8).to_a + [10]
 
   NrWhoCols = 5
-  MaxNrMoves = 20
+  MaxNrMoves = 16
 
   def initialize(filename)
     super()
@@ -41,8 +41,6 @@ class DuckMovementEntry < Qt::Widget
     hbox.addStretch 1
     hbox.addWidget @button_enter, 1, Qt::AlignLeft
 
-    vbox.addWidget Qt::Label.new "Enter Movement"
-
     book_box = Qt::HBoxLayout.new
     book_box.addWidget Qt::Label.new "Book", self
     @current_book = Qt::ComboBox.new self
@@ -68,14 +66,10 @@ class DuckMovementEntry < Qt::Widget
 
     MovementEdits.each {|col| vbox.addLayout(text_entry(col))}
 
-    @move_box = Qt::HBoxLayout.new
-    move_label = Qt::Label.new "Movements", self
-    @move_box.addWidget move_label
     @current_moves = Qt::VBoxLayout.new
     init_moves
     set_moves
-    @move_box.addLayout @current_moves
-    vbox.addLayout @move_box
+    vbox.addLayout @current_moves
 
     vbox.addStretch 1
     vbox.addLayout hbox
@@ -252,6 +246,8 @@ class DuckMovementEntry < Qt::Widget
   end
 end
 
-app = Qt::Application.new ARGV
-DuckMovementEntry.new(Filename)
-app.exec
+if $0 == __FILE__
+  app = Qt::Application.new ARGV
+  DuckMovementEntry.new(Filename)
+  app.exec
+end
