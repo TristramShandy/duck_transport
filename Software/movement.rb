@@ -70,7 +70,7 @@ class DuckMovement
   def add_person(name)
     add(:persons, [name])
     pid = @db.last_insert_row_id
-    data[:person] << [pid, name]
+    data[:persons] << [pid, name]
   end
 
   def change_person(ix, new_name)

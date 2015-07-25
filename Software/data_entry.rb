@@ -200,7 +200,7 @@ class DuckMovementEntry < Qt::Widget
     nr_movs = @display_movs.size
     MaxNrMoves.times do |i_mov|
       if i_mov < nr_movs
-        @move_edits[i_mov].text = @display_movs[i_mov].values_at(*MovementIx).join(" | ")
+        @move_edits[i_mov].text = @display_movs[i_mov].values_at(1, *MovementIx).join(" | ")
         @move_buttons[i_mov].setEnabled(true)
       else
         @move_edits[i_mov].text = ""
