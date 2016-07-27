@@ -46,7 +46,7 @@ Titles = [
   TitleInfo.new(:cbl_ddcg, CblDdcgName, CblDdcgBookname, [1]),
   TitleInfo.new(:cbl_uscop, CblUscopName, CblUscopBookname, [1, 2]),
   TitleInfo.new(:cbl_wdcs, CblWdcsName, CblWdcsBookname, [1]),
-  TitleInfo.new(:bcs, BcsName, BcsBookname, [2, 4, 6, 7, 9, 10]),
+  TitleInfo.new(:bcs, BcsName, BcsBookname, [2, 3, 4, 6, 7, 9, 10]),
 ]
 
 UrlPrefix = "http://www.barksbase.de/deutsch/"

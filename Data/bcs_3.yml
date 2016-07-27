@@ -1,0 +1,64 @@
+---
+- :name: Barks Comics & Stories
+  :vol: 3
+  :stories:
+  - :name: The Great Ski Race
+    :year: 1945
+    :name_de: Ein schmähliches Ende
+    :inducks_id: W WDC 62-02
+  - :name: Ten
+    :year: 1945
+    :name_de: Der schönste Finderlohn
+    :inducks_id: W WDC 63-02
+  - :name: Donald Tames His Temper
+    :year: 1945
+    :name_de: Gute Vorsätze
+    :inducks_id: W WDC 64-02
+  - :name: Joe from Singapore
+    :year: 1945
+    :name_de: Lore aus Singapore
+    :inducks_id: W WDC 65-02
+  - :name: The Master Ice
+    :year: 1945
+    :name_de: Der Fachmann
+    :inducks_id: W WDC 66-02
+  - :name: Jet Rescue
+    :year: 1945
+    :name_de: Gute Geldanlage
+    :inducks_id: W WDC 67-02
+  - :name: Donald's Monster Kite
+    :year: 1946
+    :name_de: Freuden des Drachensteigenlassens
+    :inducks_id: W WDC 68-02
+  - :name: Biceps Blues
+    :year: 1946
+    :name_de: Jedenfalls Muskelschmalz
+    :inducks_id: W WDC 69-02
+  - :name: The Smugsnorkle Squatty
+    :year: 1946
+    :name_de: Der russische Rassehund
+    :inducks_id: W WDC 70-02
+  - :name: Swimming Swindlers
+    :year: 1946
+    :name_de: Eine gute Lehre
+    :inducks_id: W WDC 71-02
+  - :name: Playing Hookey
+    :year: 1946
+    :name_de: Wie du mir, so ich dir
+    :inducks_id: W WDC 72-02
+  - :name: The Gold Finder
+    :year: 1946
+    :name_de: Verhängnisvolle Erfindung
+    :inducks_id: W WDC 73-02
+  - :name: Donald Duck and the Boys
+    :year: 1946
+    :name_de: Gnadenlos
+    :inducks_id: W WDC 74-01
+  - :name: Turkey Trouble
+    :year: 1946
+    :name_de: Erntedankfest
+    :inducks_id: W WDC 75-01
+  - :name: The Cantankerous Cat
+    :year: 1946
+    :name_de: Falsch wie Gift
+    :inducks_id: W WDC 76-02

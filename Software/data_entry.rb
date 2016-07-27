@@ -131,7 +131,6 @@ class DuckMovementEntry < Qt::Widget
     else
       movement_row = MovementEdits.map {|col| @edits[col].displayText }
       movement_row.unshift person_row.join(', ')
-      # story_id = @story_list[@current_story.currentIndex][0]
       @movement.add_movement(movement_row, person_row, @story_id)
       set_moves
     end
