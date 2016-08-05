@@ -1,8 +1,6 @@
 require 'sqlite3'
 
 class DuckMovement
-  attr_reader :data
-
   ColumnNames = {
     :books => [:id, :name, :volume],
     :stories => [:id, :name, :year, :name_de, :inducks_id],
@@ -14,15 +12,8 @@ class DuckMovement
 
   def initialize(filename)
     @db = SQLite3::Database.new(filename)
-    @data = {}
-    ColumnNames.keys.each {|table| @data[table] = @db.execute "select * from #{table}"}
-    update_index
   end
 
-  def update_index(changed = :all)
-    @person_index = create_index(:persons, :name, :id) if changed == :all || changed == :persons
-    @story_index = create_id_index(:stories) if changed == :all || changed == :stories
-  end
 
   def add(table, row)
     table_sym = table.to_sym
@@ -30,10 +21,7 @@ class DuckMovement
     if cols
       sql = "insert into #{table_sym} (#{cols.join(', ')}) values (#{qm(cols.size)})"
       @db.execute sql, row
-      # @db.execute "insert into #{table_sym} (#{cols.join(', ')}) values (#{qm(cols.size)})", row
       oid = @db.last_insert_row_id
-      @data[table_sym] << (oid ? [oid] + row : row)
-      update_index(table_sym)
     else
       raise "Unknown table name #{table}"
     end
@@ -44,6 +32,21 @@ class DuckMovement
     @db.execute sql, [col_value, id]
   end
 
+  def get(table, id)
+    sql = "select * from #{table} where id = ?"
+    @db.execute(sql, [id])[0]
+  end
+
+  def get_all(table)
+    sql = "select * from #{table}"
+    @db.execute(sql)
+  end
+
+  def get_first(table)
+    sql = "select * from #{table} limit 1"
+    @db.execute(sql)[0]
+  end
+
   def qm(nr)
     (["?"] * nr).join(', ')
   end
@@ -51,74 +54,33 @@ class DuckMovement
   def add_movement(movement_pre, persons, story_id)
     movement = movement_pre[0...-1] + [story_id, movement_pre[-1]]
     add(:movements, movement)
-    mid = @db.last_insert_row_id
-    persons.each do |name|
-      if @person_index[name]
-        add(:person_movement, [mid, @person_index[name]])
-      else
-        raise "Unknown person name #{name}"
-      end
-    end
+    @db.last_insert_row_id
   end
 
   def remove_person_movement(mid, pid)
     sql = "delete from person_movement where movement_id = ? and person_id = ?;"
-    @data[:person_movement].delete_if {|pm| pm[0] == mid && pm[1] == pid}
     @db.execute sql, [mid, pid]
   end
 
   def add_person(name)
-    add(:persons, [name])
-    pid = @db.last_insert_row_id
-    data[:persons] << [pid, name]
+    sql = "insert into persons (name) values (?)"
+    @db.execute sql, [name]
+    @db.last_insert_row_id
   end
 
   def change_person(ix, new_name)
-    item = @data[:persons][ix]
-    if item[1] != new_name
-      item[1] = new_name
-      change(:persons, :name, new_name, item[0])
-    end
-  end
-
-  def create_index(table, key_col, id_col = :id)
-    result = {}
-    ix_key = ColumnNames[table].index(key_col)
-    ix_value = ColumnNames[table].index(id_col)
-    @data[table].each {|row| result[row[ix_key]] = row[ix_value]}
-    result
-  end
-
-  def create_id_index(table, id_col = :id)
-    result = {}
-    id_key = ColumnNames[table].index(id_col)
-    @data[table].each {|row| result[row[id_key]] = row}
-    result
-  end
-
-  def story_by_id(sid)
-    @story_index[sid]
+    sql = "update persons set name = ? where id = ?"
+    @db.execute sql, [new_name, ix]
   end
 
   def movements_by_story(sid)
-    result = []
-    @data[:movements].each {|mov| result << mov if mov[9] == sid}
-    result
+    sql = "select * from movements where story_id = ?"
+    @db.execute sql, [sid]
   end
 
   def persons_by_movement(mid)
-    result = []
-    @data[:person_movement].each {|pm| result << pm[1] if pm[0] == mid}
-    result
-  end
-
-  def movement_by_id(mid)
-    @data[:movements].each {|mov| return mov if mov[0] == mid}
-    nil
-  end
-
-  def get_book_by_id(bid)
-    @data[:books].each {|b| return b if b[0] == bid}
+    sql = "select person_id from person_movement where movement_id = ?"
+    @db.execute sql, [mid]
   end
 end
 

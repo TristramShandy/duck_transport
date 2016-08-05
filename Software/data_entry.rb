@@ -1,7 +1,13 @@
 require 'Qt'
 require './movement'
 
-Filename = "duck_movement.db"
+Test = true
+
+if Test
+  Filename = "test_duck_movement.db"
+else
+  Filename = "duck_movement.db"
+end
 
 class DuckMovementEntry < Qt::Widget
   slots :enter_movement, :set_moves, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)', 'set_story(int)'
@@ -18,7 +24,7 @@ class DuckMovementEntry < Qt::Widget
     @edits = {}
     @duck_names = []
     @edit_mode = nil
-    @story_id = @movement.data[:stories][0][0]
+    @story_id = @movement.get_first("stories")[0]
     setWindowTitle "Duck Movement"
     setToolTip "Enter Movement"
     init_ui
@@ -99,13 +105,13 @@ class DuckMovementEntry < Qt::Widget
     @current_who.each_with_index do |who, ix|
       if who.isChecked
         person_row << who.text 
-        person_ids << @movement.data[:persons][ix][0]
+        person_ids << @duck_ids[ix]
       end
     end
     person_ids.sort!
 
     if @edit_mode
-      mov = @movement.movement_by_id @edit_mode
+      mov = @movement.get("movements", @edit_mode)
       move_id = @edit_mode
       MovementEdits.each_with_index do |col, ix|
         txt = @edits[col].displayText
@@ -127,7 +133,7 @@ class DuckMovementEntry < Qt::Widget
       end
       @edit_mode = nil
       @button_enter.text = "Enter"
-      sync
+      set_moves
     else
       movement_row = MovementEdits.map {|col| @edits[col].displayText }
       movement_row.unshift person_row.join(', ')
@@ -138,20 +144,20 @@ class DuckMovementEntry < Qt::Widget
 
   def change_stories(ix)
     return if @block_book
-    @selected_book = @movement.data[:books][ix]
-    set_stories(true)
+    @selected_book = @movement.get("books", ix)
+    set_stories
   end
 
   def set_books
     if @selected_book
-      @selected_book = @movement.get_book_by_id(@selected_book[0])
+      @selected_book = @movement.get("books", @selected_book[0])
     else
-      @selected_book = @movement.data[:books][0]
+      @selected_book = @movement.get_first("books")
     end
     @block_book = true
     @current_book.clear
     ix = 0
-    @movement.data[:books].each_with_index do |row, i|
+    @movement.get_all("books").each_with_index do |row, i|
       @current_book.addItem "#{row[1]} #{row[2]}"
       ix = i if @selected_book[0] == row[0]
     end
@@ -162,8 +168,8 @@ class DuckMovementEntry < Qt::Widget
 
   def set_stories(new_set = false)
     @story_list = []
-    @movement.data[:stories_in_books].each do |sib|
-      @story_list << @movement.story_by_id(sib[1]) if sib[2] == @selected_book[0]
+    @movement.get_all("stories_in_books").each do |sib|
+      @story_list << @movement.get("stories", sib[1]) if sib[2] == @selected_book[0]
     end
     @story_id = @story_list[0][0] if new_set
     @block_story = true
@@ -221,7 +227,9 @@ class DuckMovementEntry < Qt::Widget
   def set_ducks
     @current_who ||= []
     nr_ducks = @duck_names.size
-    @movement.data[:persons].each_with_index do |person, i|
+    @duck_ids = []
+    @movement.get_all("persons").each_with_index do |person, i|
+      @duck_ids << person[0]
       if i < nr_ducks
         @duck_names[i].text = person[1]
       else
@@ -243,13 +251,13 @@ class DuckMovementEntry < Qt::Widget
     move_id = @display_movs[move_ix][0]
     @edit_mode = move_id
     @button_enter.text = "Change"
-    mov = @movement.movement_by_id(move_id)
+    mov = @movement.get("movements", move_id)
     MovementEdits.each_with_index do |name, i|
       @edits[name].text = mov[MovementIx[i]]
     end
 
     pids = @movement.persons_by_movement(move_id)
-    @movement.data[:persons].each_with_index do |per, i|
+    @movement.get_all("persons").each_with_index do |per, i|
       @duck_names[i].setChecked(pids.include?(per[0]))
     end
   end
