@@ -1,7 +1,13 @@
 require 'Qt'
 require './movement'
 
-Filename = "duck_movement.db"
+Test = true
+
+if Test
+  Filename = "test_duck_movement.db"
+else
+  Filename = "duck_movement.db"
+end
 
 class DuckMovementEntry < Qt::Widget
   slots :enter_movement, :set_moves, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)', 'set_story(int)'
@@ -127,7 +133,7 @@ class DuckMovementEntry < Qt::Widget
       end
       @edit_mode = nil
       @button_enter.text = "Enter"
-      sync
+      set_moves
     else
       movement_row = MovementEdits.map {|col| @edits[col].displayText }
       movement_row.unshift person_row.join(', ')

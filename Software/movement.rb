@@ -14,7 +14,7 @@ class DuckMovement
 
   def initialize(filename)
     @db = SQLite3::Database.new(filename)
-    @data = {}
+    @data = {} # holds a copy of the db in memory
     ColumnNames.keys.each {|table| @data[table] = @db.execute "select * from #{table}"}
     update_index
   end
@@ -30,7 +30,6 @@ class DuckMovement
     if cols
       sql = "insert into #{table_sym} (#{cols.join(', ')}) values (#{qm(cols.size)})"
       @db.execute sql, row
-      # @db.execute "insert into #{table_sym} (#{cols.join(', ')}) values (#{qm(cols.size)})", row
       oid = @db.last_insert_row_id
       @data[table_sym] << (oid ? [oid] + row : row)
       update_index(table_sym)
@@ -42,6 +41,15 @@ class DuckMovement
   def change(table, col_name, col_value, id)
     sql = "update #{table} set #{col_name} = ? where id = ?;"
     @db.execute sql, [col_value, id]
+    @data[table].each do |row|
+      if row[0] == id
+        ColumnNames[table].each_with_index do |col, i_col|
+          if col == col_name
+            row[i_col] = col_value
+          end
+        end
+      end
+    end
   end
 
   def qm(nr)
