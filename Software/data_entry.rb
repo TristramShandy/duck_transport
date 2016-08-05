@@ -122,6 +122,7 @@ class DuckMovementEntry < Qt::Widget
       end
 
       old_person_ids = @movement.persons_by_movement(move_id).sort
+      puts "XXA #{old_person_ids.inspect} #{person_ids.inspect}"
       if person_ids != old_person_ids
         @movement.change(:movements, :movers, person_row.join(', '), move_id)
         (person_ids - old_person_ids).each do |new_persons|
@@ -256,9 +257,9 @@ class DuckMovementEntry < Qt::Widget
       @edits[name].text = mov[MovementIx[i]]
     end
 
-    pids = @movement.persons_by_movement(move_id)
-    @movement.get_all("persons").each_with_index do |per, i|
-      @duck_names[i].setChecked(pids.include?(per[0]))
+    current_ducks = @movement.persons_by_movement(move_id).map {|pid| @duck_ids.index(pid)}
+    @duck_names.each_with_index do |duck_box, i|
+      duck_box.setChecked(current_ducks.include?(i))
     end
   end
 end

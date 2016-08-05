@@ -75,12 +75,12 @@ class DuckMovement
 
   def movements_by_story(sid)
     sql = "select * from movements where story_id = ?"
-    @db.execute sql, [sid]
+    @db.execute(sql, [sid])
   end
 
   def persons_by_movement(mid)
     sql = "select person_id from person_movement where movement_id = ?"
-    @db.execute sql, [mid]
+    @db.execute(sql, [mid]).flatten
   end
 end
 
