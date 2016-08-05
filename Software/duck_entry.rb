@@ -1,7 +1,13 @@
 require 'Qt'
 require './movement'
 
-Filename = "duck_movement.db"
+Test = true
+if Test
+  Filename = "test_duck_movement.db"
+else
+  Filename = "duck_movement.db"
+end
+
 
 class DuckEntry < Qt::Widget
   slots :create_duck, 'save_duck(int)'
@@ -44,16 +50,16 @@ class DuckEntry < Qt::Widget
 
   def set_ducks
     @edits = []
-    @movement.data[:persons].each do |person|
-      add_edit(person[1])
+    @movement.get_all("persons").each do |person|
+      add_edit(*person)
     end
   end
 
-  def add_edit(name)
+  def add_edit(pid, name)
     nr_edits = @edits.size
     layout = Qt::HBoxLayout.new
     edit = Qt::LineEdit.new name, self
-    @edits << edit
+    @edits << [edit, pid]
     layout.addWidget edit
     button = Qt::PushButton.new "Save", self
     layout.addWidget button
@@ -63,14 +69,14 @@ class DuckEntry < Qt::Widget
   end
 
   def save_duck(ix)
-    @movement.change_person(ix, @edits[ix].text)
+    @movement.change_person(@edits[ix][1], @edits[ix][0].text)
   end
 
   def create_duck
     new_name = @new_edit.text
     if new_name && ! new_name.empty?
-      @movement.add_person(@new_edit.text)
-      add_edit(new_name)
+      pid = @movement.add_person(@new_edit.text)
+      add_edit(pid, new_name)
     end
   end
 end
