@@ -2,27 +2,47 @@ require 'Qt'
 require './movement'
 
 class DbList < Qt::ComboBox
-  def initialize(db, table, display_col, parent_table = nil, parent_table_column = "parent_id")
+  def initialize(db, table, display_indices, parent_info = nil)
     super()
     @db = db
     @table = table
-    @display_col = display_col
-    @parent_table = parent_table
-    @parent_table_column = parent_table_column
+    @display_indices = display_indices
+    @parent_info = parent_info
     @ids = []
-    @selected = nil
     update_list
+  end
+
+  def display_str(row)
+    row.values_at(*@display_indices).join(", ")
   end
 
   def update_list(parent_id = nil)
     value_list = []
-    if parent_table
+    clear
+    if @parent_info
       if parent_id
-        value_list = db.get_all_with(table, parent_table_column, parent_id)
+        @ids = @db.get_all_with(@parent_info[:table], @parent_info[:id_column], @parent_info[:column], parent_id)
+        @db.get_multiple(@table, @ids).each do |row|
+          addItem(display_str(row))
+        end
       end
     else
-      value_list = db.get_all(table)
+      @ids = []
+      @db.get_all(@table).each do |row|
+        @ids << row[0]
+        addItem(display_str(row))
+      end
     end
-    @ids = value_list.map {|entry| entry[0]}
+    if count > 0
+      if currentIndex == 0
+        emit currentIndexChanged(0)
+      else
+        setCurrentIndex(0)
+      end
+    end
+  end
+
+  def id_from_ix(ix)
+    @ids[ix]
   end
 end

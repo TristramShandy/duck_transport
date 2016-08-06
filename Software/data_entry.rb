@@ -1,7 +1,8 @@
 require 'Qt'
 require './movement'
+require './db_list'
 
-Test = false
+Test = true
 
 if Test
   Filename = "test_duck_movement.db"
@@ -10,7 +11,7 @@ else
 end
 
 class DuckMovementEntry < Qt::Widget
-  slots :enter_movement, :set_moves, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)', 'set_story(int)'
+  slots :enter_movement, :sync, :add_duck, 'change_stories(int)', 'edit_move(int)', 'set_story(int)'
   MovementEdits = [:origin_place, :origin_time, :destination_place, :destination_time, :movement_mode, :purpose, :comment, :trip_index]
   MovementIx = (2..8).to_a + [10]
 
@@ -50,16 +51,13 @@ class DuckMovementEntry < Qt::Widget
 
     book_box = Qt::HBoxLayout.new
     book_box.addWidget Qt::Label.new "Book", self
-    @current_book = Qt::ComboBox.new self
-    set_books
+    @current_book = DbList.new(@movement, "books", [1, 2])
     book_box.addWidget @current_book
     vbox.addLayout book_box
 
-
     story_box = Qt::HBoxLayout.new
     story_box.addWidget Qt::Label.new "Story", self
-    @current_story = Qt::ComboBox.new self
-    set_stories
+    @current_story = DbList.new(@movement, "stories", [1, 3, 2], {:table => "stories_in_books", :column => "book_id", :id_column => "story_id"})
     story_box.addWidget @current_story
     vbox.addLayout story_box
 
@@ -86,6 +84,7 @@ class DuckMovementEntry < Qt::Widget
     connect @button_enter, SIGNAL('clicked()'), self, SLOT('enter_movement()')
     connect @current_book, SIGNAL('currentIndexChanged(int)'), self, SLOT('change_stories(int)')
     connect @current_story, SIGNAL('currentIndexChanged(int)'), self, SLOT('set_story(int)')
+    change_stories(0)
   end
 
   def text_entry(name)
@@ -122,7 +121,6 @@ class DuckMovementEntry < Qt::Widget
       end
 
       old_person_ids = @movement.persons_by_movement(move_id).sort
-      puts "XXA #{old_person_ids.inspect} #{person_ids.inspect}"
       if person_ids != old_person_ids
         @movement.change(:movements, :movers, person_row.join(', '), move_id)
         (person_ids - old_person_ids).each do |new_persons|
@@ -144,45 +142,7 @@ class DuckMovementEntry < Qt::Widget
   end
 
   def change_stories(ix)
-    return if @block_book
-    @selected_book = @movement.get("books", @book_ids[ix])
-    set_stories
-  end
-
-  def set_books
-    if @selected_book
-      @selected_book = @movement.get("books", @selected_book[0])
-    else
-      @selected_book = @movement.get_first("books")
-    end
-    @block_book = true
-    @current_book.clear
-    ix = 0
-    @book_ids = []
-    @movement.get_all("books").each_with_index do |row, i|
-      @current_book.addItem "#{row[1]} #{row[2]}"
-      @book_ids << row[0]
-      ix = i if @selected_book[0] == row[0]
-    end
-    @block_book = false
-    @current_book.currentIndex = ix
-    @current_book.currentIndexChanged(ix)
-  end
-
-  def set_stories(new_set = false)
-    @story_ids = @movement.story_ids_from_book(@selected_book[0])
-    @story_list = @story_ids.map {|sid| @movement.get("stories", sid)}
-    @story_id = @story_ids[0] if new_set
-    @block_story = true
-    @current_story.clear
-    ix = 0
-    @story_list.each_with_index do |row, i|
-      @current_story.addItem "#{row[1]} | #{row[3]}"
-      ix = i if @story_id == row[0]
-    end
-    @current_story.currentIndex = ix
-    @block_story = false
-    set_moves if @current_moves
+    @current_story.update_list(@current_book.id_from_ix(ix))
   end
 
   def init_moves
@@ -204,10 +164,8 @@ class DuckMovementEntry < Qt::Widget
   end
 
   def set_story(ix)
-    unless @block_story
-      @story_id = @story_list[ix][0]
-      set_moves
-    end
+    @story_id = @current_story.id_from_ix(ix)
+    set_moves
   end
 
   def set_moves
@@ -244,7 +202,7 @@ class DuckMovementEntry < Qt::Widget
 
   def sync
     @movement = DuckMovement.new(@filename)
-    set_books
+    @current_book.update_list
     set_ducks
   end
 

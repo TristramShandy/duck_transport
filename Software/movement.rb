@@ -37,9 +37,19 @@ class DuckMovement
     @db.execute(sql, [id])[0]
   end
 
+  def get_multiple(table, ids)
+    sql = "select * from #{table} where id in (#{qm(ids.size)})"
+    @db.execute(sql, [ids])
+  end
+
   def get_all(table)
     sql = "select * from #{table}"
     @db.execute(sql)
+  end
+
+  def get_all_with(table, id_column, column, condition)
+    sql = "select #{id_column} from #{table} where #{column} = #{condition}"
+    @db.execute(sql).flatten
   end
 
   def get_first(table)
