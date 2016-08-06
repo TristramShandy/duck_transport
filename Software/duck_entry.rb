@@ -1,7 +1,7 @@
 require 'Qt'
 require './movement'
 
-Test = true
+Test = false
 if Test
   Filename = "test_duck_movement.db"
 else

@@ -1,7 +1,7 @@
 require 'Qt'
 require './movement'
 
-Test = true
+Test = false
 
 if Test
   Filename = "test_duck_movement.db"
@@ -145,7 +145,7 @@ class DuckMovementEntry < Qt::Widget
 
   def change_stories(ix)
     return if @block_book
-    @selected_book = @movement.get("books", ix)
+    @selected_book = @movement.get("books", @book_ids[ix])
     set_stories
   end
 
@@ -158,8 +158,10 @@ class DuckMovementEntry < Qt::Widget
     @block_book = true
     @current_book.clear
     ix = 0
+    @book_ids = []
     @movement.get_all("books").each_with_index do |row, i|
       @current_book.addItem "#{row[1]} #{row[2]}"
+      @book_ids << row[0]
       ix = i if @selected_book[0] == row[0]
     end
     @block_book = false
@@ -168,11 +170,9 @@ class DuckMovementEntry < Qt::Widget
   end
 
   def set_stories(new_set = false)
-    @story_list = []
-    @movement.get_all("stories_in_books").each do |sib|
-      @story_list << @movement.get("stories", sib[1]) if sib[2] == @selected_book[0]
-    end
-    @story_id = @story_list[0][0] if new_set
+    @story_ids = @movement.story_ids_from_book(@selected_book[0])
+    @story_list = @story_ids.map {|sid| @movement.get("stories", sid)}
+    @story_id = @story_ids[0] if new_set
     @block_story = true
     @current_story.clear
     ix = 0

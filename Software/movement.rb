@@ -82,6 +82,11 @@ class DuckMovement
     sql = "select person_id from person_movement where movement_id = ?"
     @db.execute(sql, [mid]).flatten
   end
+
+  def story_ids_from_book(bid)
+    sql = "select story_id from stories_in_books where book_id = ?"
+    @db.execute(sql, [bid]).flatten
+  end
 end
 
 if $0 == __FILE__
