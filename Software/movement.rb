@@ -61,10 +61,15 @@ class DuckMovement
     (["?"] * nr).join(', ')
   end
 
-  def add_movement(movement_pre, persons, story_id)
+  def add_movement(movement_pre, person_ids, story_id)
     movement = movement_pre[0...-1] + [story_id, movement_pre[-1]]
     add(:movements, movement)
-    @db.last_insert_row_id
+    mid = @db.last_insert_row_id
+    sql = "insert into person_movement (movement_id, person_id) values "
+    sql << person_ids.map {|_| "(?, ?)"}.join(", ")
+    values = person_ids.map {|pid| [mid, pid]}.flatten
+    @db.execute(sql, values)
+    mid
   end
 
   def remove_person_movement(mid, pid)
