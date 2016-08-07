@@ -2,12 +2,10 @@ require 'Qt'
 require './movement'
 require './db_list'
 
-Test = true
+DefaultFilename = "duck_movement.db"
 
-if Test
-  Filename = "test_duck_movement.db"
-else
-  Filename = "duck_movement.db"
+def usage
+  puts "usage: ruby duck_entry.rb database.db"
 end
 
 class DuckMovementEntry < Qt::Widget
@@ -224,6 +222,10 @@ end
 
 if $0 == __FILE__
   app = Qt::Application.new ARGV
-  DuckMovementEntry.new(Filename)
+  if ARGV.size > 1
+    usage
+    exit 0
+  end
+  DuckMovementEntry.new(ARGV[0] || DefaultFilename)
   app.exec
 end
