@@ -4,8 +4,16 @@ require './db_list'
 
 DefaultFilename = "duck_movement.db"
 
+EnterKeys = [Qt::Key_Enter, Qt::Key_Return]
+
 def usage
   puts "usage: ruby duck_entry.rb database.db"
+end
+
+class EnterFilter < Qt::Object
+  def eventFilter(obj, event)
+    event.type == Qt::Event::KeyPress && ! EnterKeys.include?(event.key)
+  end
 end
 
 class DuckMovementEntry < Qt::Widget
@@ -34,6 +42,8 @@ class DuckMovementEntry < Qt::Widget
   def init_ui
     @move_to_edit = Qt::SignalMapper.new self
     connect @move_to_edit, SIGNAL('mapped(int)'), self, SLOT('edit_move(int)')
+    @enter_filter = EnterFilter.new
+    installEventFilter(@enter_filter)
 
     vbox = Qt::VBoxLayout.new self
     hbox = Qt::HBoxLayout.new
@@ -83,6 +93,14 @@ class DuckMovementEntry < Qt::Widget
     connect @current_book, SIGNAL('currentIndexChanged(int)'), self, SLOT('change_stories(int)')
     connect @current_story, SIGNAL('currentIndexChanged(int)'), self, SLOT('set_story(int)')
     change_stories(0)
+  end
+
+  def keyPressEvent(event)
+    if EnterKeys.include?(event.key)
+      enter_movement
+    else
+      super
+    end
   end
 
   def text_entry(name)
