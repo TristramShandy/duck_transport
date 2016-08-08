@@ -13,7 +13,7 @@ class DbList < Qt::ComboBox
   end
 
   def display_str(row)
-    row.values_at(*@display_indices).join(", ")
+    row.values_at(*@display_indices).delete_if {|val| val.to_s.empty?}.join(", ")
   end
 
   def update_list(parent_id = nil)
